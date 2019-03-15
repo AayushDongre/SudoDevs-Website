@@ -57,7 +57,7 @@ document.addEventListener("wheel", function (e) {
         current.delay(1400).animate({opacity:1},500);
         
         
-    current.children("div.title").delay(2000).css({opacity:"0",top:"100%"}).animate({top:"35.29%",opacity:"1"});
+    current.children("div.title").delay(2000).css({opacity:"0",top:"100%"}).animate({top:"20%",opacity:"1"});
         
         current.children("div.infobox").children("div.head").children("h2.info-title").delay(1700).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"});
         
@@ -108,7 +108,7 @@ document.addEventListener("wheel", function (e) {
         current.delay(1400).animate({opacity:1},500);
         
         
-        current.children("div.title").delay(2000).css({opacity:"0",top:"-50px"}).animate({top:"35.29%",opacity:"1"});
+        current.children("div.title").delay(2000).css({opacity:"0",top:"-50px"}).animate({top:"20%",opacity:"1"});
         
         current.children("div.infobox").children("div.head").children("h2.info-title").delay(1700).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
         
@@ -120,9 +120,12 @@ document.addEventListener("wheel", function (e) {
         prevtime = currenttime;
     }
     
-            
+      var colour = current.children("div.title").css("color");
+      $(".slideno").text(i+1).css({color:colour});    
+      
 
 },true);
+    
     
 var card = $(".infobox");
 

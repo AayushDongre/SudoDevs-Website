@@ -1,0 +1,220 @@
+/*###########################  ANIMATIONS  #################################*/
+@keyframes img-out{
+    0%{
+      left:60.88%;
+        width: 20.57%;
+        background: blue;
+    }
+    100%{
+        left:81.45%;
+        width: 0;
+        background: green;
+    }
+}
+@keyframes img-in{
+    0%{
+      left:81.45%;
+      width: 0;
+    }
+    100%{
+        left:60.88%;
+    }
+}
+@keyframes text-in-up{
+    0%{
+      opacity: 0;
+      top:-50px;   
+      
+    }
+    100%{
+        opacity: 1;  
+    }
+}
+@keyframes text-in-down{
+    0%{
+      opacity: 0;
+      top:100%;
+  
+      
+    }
+    100%{           
+        opacity: 1;  
+    }
+}
+@keyframes text-out-up{
+    0%{
+     
+        
+      
+    }
+    100%{
+         top:-50px;
+         opacity: 0;
+    }
+}
+@keyframes text-out-down{
+    0%{
+      opacity: 1;
+    }
+    100%{
+        opacity: 0;  
+        top:100%;
+    }
+    
+}
+/*#########################  ANIMATON CLASSES  ################################################*/
+.img-in{
+    animation: img-in 1s ease-out;
+    animation-fill-mode: forwards;
+}
+.img-out{
+    animation: img-out 1s ease-out;
+    animation-fill-mode: forwards;
+}
+.text-in-up{
+    animation: text-in-up 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+.text-in-down{
+    animation: text-in-down 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+.text-out-up{
+     animation: text-out-up 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+.text-out-down{
+    animation: text-out-down 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+body{
+    font-size: 12px;
+    overflow-y:hidden;
+}
+
+#p2{
+    opacity: 0;
+    background: blue;
+}
+
+#p3{
+ opacity: 0;
+}
+
+#p4{
+ opacity: 0;
+}
+.wrapper{
+    background: blue;
+}
+
+.infobox{
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    display: inline-block;
+    height: 41.62%;
+    width: 29.16%;
+    top:30.39%;
+    left:35.15%;
+    box-shadow: 4px 4px 50px 2px #222; 
+   z-index: 12;
+    
+}
+.infobox::after{
+    content: "";
+    position: absolute;
+    display: block;
+    top:0;
+    left:50%;
+    width:50%;
+    height: 100%;
+    background: rgba(255,255,255,1);
+   z-index: -50;
+}
+
+
+.head{
+    position:relative;
+    top:27.13%;
+    left:9.4%;
+    
+}
+.title{
+    font-size: 10em;
+    position:absolute;
+    top:35.29%;
+    left:26.52%;
+    animation-delay: .2s;
+}
+
+
+.head .info-title{
+    position: relative;
+    top:4px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    animation-delay: 1.5s;
+}
+.head .info-des{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color:#5A5A5A;
+    animation-delay: 1.7s;
+}
+.description{
+    position: relative;
+    width: 100%;
+    top:70.63%;
+    left:9.4%;
+}
+.description .what-title{
+    position: relative;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    top:4px;
+    margin: 0;
+    padding: 0;
+    color: #B3B3B3;
+}
+.description .what-des{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color:#5a5a5a;
+    opacity: 1;
+}
+
+
+.imgbox{
+    background-size: cover; 
+    position: fixed;
+    width: 20.57%;
+    height:74.08%;
+    top:15.98%;
+    left:60.88%;
+    z-index: -2;
+}
+.imgbox{
+/*    background: url(../img/0.jpg);*/
+/*    background-size: cover; */
+}
+
+#p4 .title{
+    color:#6F7C84
+}
+#p1 .title{
+    color: #245D64
+}
+#p2 .title{
+    color:#C5B660
+}
+#p3 .title{
+    color:#FF8752
+}

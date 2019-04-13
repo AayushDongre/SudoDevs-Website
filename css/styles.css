@@ -72,6 +72,7 @@
       width: 100%; 
     } 
 }  
+
 /*#########################  ANIMATON CLASSES  ################################################*/
 .img-in{
     animation: img-in 1s ease-out;
@@ -102,7 +103,7 @@
 body{
     font-size: 12px;
     overflow:hidden;
-    
+    background: blue;
 }
 #p2,#p3,#p4{
     opacity: 0;
@@ -219,9 +220,9 @@ body{
 .navbar{
     position:absolute;
     margin:0;
-    min-width:100vw;
+    width:100%;
     z-index: 20;
-
+    /* background: red; */
 }
 
 .nav-body{
@@ -229,9 +230,9 @@ body{
     height: 0;
     transition: 1s;
     transition-timing-function: cubic-bezier(.77, .19, .27, .99);
-    min-width:100vw;
-    height:0vh;
-    background: rgba(255,255,255,1);
+    width:100vw;
+    /* background: rgba(255,255,255,1); */
+    background: green;
 }
 .nav-left{
     position: relative;
@@ -300,3 +301,42 @@ body{
 .current:before{
     width: 100%;
 }
+@media only screen and (max-width: 600px) {
+    html {
+      background-color: lightblue;
+      overflow-x: hidden;
+      font-size: 15px;
+    }
+    body{
+        overflow: hidden;
+    }
+    .nav-main{
+        /* background: #22ffaa; */
+        min-width: 110vw;
+    }
+    .nav-body{
+        min-width:110vw;
+    }
+    .imgbox{
+        position: absolute;
+        max-height: 30%;
+        min-width: 100%;
+        left:0;
+        top:70%
+    }
+    .title{
+        position: absolute;
+        left:0;
+        top:20px;
+        font-size: 8rem;
+    }
+    
+    .infobox{
+        position: absolute;
+        left: 0;
+        top:15%;
+        min-width: 100vw;
+        max-height: 30%;
+        min-height: 10%;
+    }
+  }

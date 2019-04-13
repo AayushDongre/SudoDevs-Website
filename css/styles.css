@@ -62,6 +62,16 @@
     }
     
 }
+
+
+@keyframes underline
+{ 0%{ 
+       width: 0; 
+    } 
+  100%{ 
+      width: 100%; 
+    } 
+}  
 /*#########################  ANIMATON CLASSES  ################################################*/
 .img-in{
     animation: img-in 1s ease-out;
@@ -87,42 +97,57 @@
     animation: text-out-down 1.5s ease-out;
     animation-fill-mode: forwards;
 }
-
-
-
+/*###############################################  GENERAL  #################################################*/
 
 body{
     font-size: 12px;
-    overflow-y:hidden;
+    overflow:hidden;
+    
 }
-
-#p2{
+#p2,#p3,#p4{
     opacity: 0;
-    background: blue;
 }
 
-#p3{
- opacity: 0;
+#p4 .title{
+    color:#6F7C84
+}
+#p1 .title{
+    color: #245D64
+}
+#p2 .title{
+    color:#C5B660
+}
+#p3 .title{
+    color:#FF8752
 }
 
-#p4{
- opacity: 0;
-}
 .wrapper{
-    background: blue;
+    position: absolute;
+/*    background: rgba(54,23,66,0.2);*/
+/*    border: solid 1px red;*/
+    top:0;
+    left:0;
+ 
 }
-
+.imgbox{
+    background-size: cover; 
+    position: fixed;
+    width: 20.57%;
+    height:74.08%;
+    top:15.98%;
+    left:60.88%;
+    z-index: -2;
+}
+/*#########################################  INFOBOX  ###############################*/
 .infobox{
     background: rgba(255,255,255,0.9);
     position: absolute;
-    display: inline-block;
     height: 41.62%;
     width: 29.16%;
     top:30.39%;
     left:35.15%;
     box-shadow: 4px 4px 50px 2px #222; 
    z-index: 12;
-    
 }
 .infobox::after{
     content: "";
@@ -138,7 +163,7 @@ body{
 
 
 .head{
-    position:relative;
+    position:absolute;
     top:27.13%;
     left:9.4%;
     
@@ -169,9 +194,9 @@ body{
     animation-delay: 1.7s;
 }
 .description{
-    position: relative;
+    position: absolute;
     width: 100%;
-    top:70.63%;
+    top: 78.2%;
     left:9.4%;
 }
 .description .what-title{
@@ -190,31 +215,88 @@ body{
     color:#5a5a5a;
     opacity: 1;
 }
+/*################################################### NAVBAR ##########################################*/
+.navbar{
+    position:absolute;
+    margin:0;
+    min-width:100vw;
+    z-index: 20;
 
-
-.imgbox{
-    background-size: cover; 
-    position: fixed;
-    width: 20.57%;
-    height:74.08%;
-    top:15.98%;
-    left:60.88%;
-    z-index: -2;
-}
-.imgbox{
-/*    background: url(../img/0.jpg);*/
-/*    background-size: cover; */
 }
 
-#p4 .title{
-    color:#6F7C84
+.nav-body{
+    position: relative  ;
+    height: 0;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.77, .19, .27, .99);
+    min-width:100vw;
+    height:0vh;
+    background: rgba(255,255,255,1);
 }
-#p1 .title{
-    color: #245D64
+.nav-left{
+    position: relative;
+    height: 90%;
+    top:1px;
+    font-size:2.5em;
+    background: rgba(211, 198, 195, 0.41);
+    border-radius: 20px;
+    padding: 0;
+    margin-left: 20px;
 }
-#p2 .title{
-    color:#C5B660
+.nav-right{
+    position: relative;
+    height: 90%;
+    top:1px;
+    font-size:2.5em;
+    border-radius: 20px;
+    padding: 0;
+    margin-left: 20px;
 }
-#p3 .title{
-    color:#FF8752
+/*########################################  NAVBAR LIST  ###########################*/
+.page{
+    display:inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.page p{
+    display: inline-block;
+}
+
+.page .underline{
+    position: absolute;
+    top:2.5em;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    width:0%;
+    background:url("../img/Rectangle%205.1.png");
+    background-size: cover;
+}
+.current .underline{
+    width:100%;
+    background: red;
+}
+.topic{
+    position: relative;
+    z-index: 1;
+    margin: 10px 0px
+}
+.topic:before{
+    position: absolute;
+    height: 7.14px;
+    width: 0%;
+    content: "";
+    background:#ff4f58;
+    border-radius: 7.14px;
+    top:68%;
+    z-index: -1;
+    transition: .8s;
+    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47)
+}
+.topic:hover:before{
+    width: 90%;
+}
+.current:before{
+    width: 100%;
 }

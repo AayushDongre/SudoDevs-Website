@@ -160,10 +160,10 @@ $(".imgbox").css({height:.7408*h,width:.2057*w})
 $(".info").css({height:.4162*h,width:.2916*w})    
     
 });
-  $('.dropdown-trigger').dropdown();
+//   $('.dropdown-trigger').dropdown();
     
     
-$('.collapsible').collapsible();
+// $('.collapsible').collapsible();
     
 
 $(".topic").click(function(){
@@ -173,16 +173,18 @@ $(".topic").click(function(){
   $(this).toggleClass("current");
 });   
  
-    $(".material-icons").click(function(){
+$(".material-icons").click(function(){
         
     heightNav=$(".nav-body").css("height");
-    heightWindow = $(window).outerHeight() + "px";
-        
+    heightWindow = $("body").css("height");
+    console.log(heightNav + " " + heightWindow);
     if(heightNav!=heightWindow)
         $(".nav-body").css({display:"block","height":"100vh"});
         
-    else if(heightNav==heightWindow)
-            $(".nav-body").css({"height":"0px"});
+    else if(heightNav == heightWindow)
+    {
+            $(".nav-body").animate({"height":"0px"});
+    }        
     });
 });
 

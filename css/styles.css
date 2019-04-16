@@ -311,18 +311,19 @@ body{
       max-height: 100vh;
         
     }
-    
+  
     body{
         overflow: hidden;
         max-height: 100vh;
         max-width: 100vw;
+      
     }
     #p1,#p2,#p3,#p4{
-        background: red;
         max-width: 100vw;
         max-height: 100vh;
     }
    
+    
     .nav-main{
         background: #22ffaa;
         max-width: 100px;

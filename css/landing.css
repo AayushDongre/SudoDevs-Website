@@ -39,7 +39,7 @@ body{
     font-size: 1.5em; 
 }
 
-/* .what::after{
+.what::after{
     position: absolute;
     bottom:15px;
     left:-30px;
@@ -52,38 +52,8 @@ body{
 }
 .what:hover::after{
     width: 130%;
-} */
+}
 
-.what::after{
-    position: absolute;
-    bottom:15px;
-    left:50.1%;
-    background:red;
-    width:0%;
-    height: 10px;
-    content: "";
-    transition: .8s;
-    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
-}
-.what:hover::after{
-    width: 65%;
-}
-.what::before{
-    position: absolute;
-
-    top:46px;
-    right:50%;
-    background:rgb(17,142,147,0.8);
-    width:0%;
-    height: 10px;
-    content: "";
-    transition: .8s;
-    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
-    transform:rotate(180deg);
-}
-.what:hover::before{
-    width: 65%;
-}
 
 @media only screen and (max-width: 600px) {
    body{

@@ -58,7 +58,7 @@ body{
     position: absolute;
     bottom:15px;
     left:50.1%;
-    background:rgb(17,142,147,0.8);
+    background:red;
     width:0%;
     height: 10px;
     content: "";

@@ -3,18 +3,16 @@
      box-sizing: border-box;
 }
 body{
-    font-size: 32px;
+    font-size: 25px;
     background: url("../img/landingbk.png");
-    /* transform: scale(.9); */
-
 }
 .bk{
-    min-width: 100vw;
+    width: 100vw;
     min-height:100vh;
     position: fixed;
     z-index: -100;
     top:-100px;
-    left: -100px;
+    margin: 0 auto;
 }
 .content{
     width: 100vw;
@@ -40,7 +38,6 @@ body{
 .what{
     position: absolute;
     top:70%;
-    /* left:45%; */
     left: 40%;
     margin: auto;
     color: white;   

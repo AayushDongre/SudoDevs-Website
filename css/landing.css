@@ -1,0 +1,121 @@
+body{
+    font-size: 32px;
+    background: url("../img/landingbk.png");
+}
+.bk{
+    min-width: 100vw;
+    min-height:100vh;
+    position: fixed;
+    z-index: -100;
+    top:-100px;
+}
+.content{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    color:white;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+
+}
+.para{
+    position: relative;
+    width: 50%;
+    margin:auto;
+    top:-10px;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.what{
+    position: absolute;
+    top:70%;
+    left:45%;
+    margin: auto;
+    color: white;   
+    font-size: 1.5em; 
+}
+
+/* .what::after{
+    position: absolute;
+    bottom:15px;
+    left:-30px;
+    background:rgb(17,142,147,0.8);
+    width:0%;
+    height: 10px;
+    content: "";
+    transition: .8s;
+    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
+}
+.what:hover::after{
+    width: 130%;
+} */
+
+.what::after{
+    position: absolute;
+    bottom:15px;
+    left:50.1%;
+    background:rgb(17,142,147,0.8);
+    width:0%;
+    height: 10px;
+    content: "";
+    transition: .8s;
+    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
+}
+.what:hover::after{
+    width: 65%;
+}
+.what::before{
+    position: absolute;
+
+    top:46px;
+    right:50%;
+    background:rgb(17,142,147,0.8);
+    width:0%;
+    height: 10px;
+    content: "";
+    transition: .8s;
+    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
+    transform:rotate(180deg);
+}
+.what:hover::before{
+    width: 65%;
+}
+
+@media only screen and (max-width: 600px) {
+   body{
+       font-size: 20px
+   }
+   .para{
+    position: relative;
+    width: 90%;
+    margin:auto;
+    text-align: center;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.what{
+    position: absolute;
+    top:70%;
+    left:30%;
+    /* margin:auto; */
+    color: white;   
+    font-size: 30px; 
+}
+.what::after{
+    bottom: 10px;
+    left:-20px;
+}
+   
+    .bk{
+        max-width: 100vw;
+        min-height:100vh;
+            position: fixed;
+            z-index: -100;
+    }
+}

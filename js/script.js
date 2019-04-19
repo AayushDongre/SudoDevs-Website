@@ -18,10 +18,10 @@ document.addEventListener("wheel", function (e) {
 
     console.log(e.deltaY + " " + difference + " " + back);
     
-    if(e.deltaY>=0 && difference > 1300)//DOWN
+    if(e.deltaY>=0 && difference > 1300 && navopen==false)//DOWN
     {
              i=i+1;
-             if(i==4)
+             if(i==3)
               i = 0;
         back =  i + ".jpg";
 
@@ -45,12 +45,12 @@ document.addEventListener("wheel", function (e) {
         current.delay(700).animate({opacity:0},500);
         
         
-        if(current.attr("id")!="p4"){
+        if(current.attr("id")!="p3"){
             current = current.next();
             if(current.attr("class")=="imgbox")
                 current=current.next();
         }
-        else if(current.attr("id")=="p4"){
+        else if(current.attr("id")=="p3"){
             current = $("#p1");
         }
        
@@ -70,7 +70,7 @@ document.addEventListener("wheel", function (e) {
     }
     
     
-    else if(e.deltaY<=0  && difference > 1300)//UP
+    else if(e.deltaY<=0  && difference > 1300 && navopen==false)//UP
     {
                 i=i-1;
 
@@ -101,7 +101,7 @@ document.addEventListener("wheel", function (e) {
                 current=current.prev();
         }
         else if(current.attr("id")=="p1"){
-            current = $("#p4");
+            current = $("#p3");
         }      
         
         
@@ -133,7 +133,6 @@ card.on("mousemove",function(e) {
   var ay = ($(window).innerHeight()/2- e.pageY)/20;
     card.css({ transform: "rotateY("+ax+"deg) rotateX("+ay+"deg)","-webkit-transform": "rotateY("+ax+"deg) rotateX("+ay+"deg)","-moz-transform": "rotateY("+ax+"deg) rotateX("+ay+"deg)"});
 });
-    
 card.on("mouseleave",function(e) {  
     
 
@@ -161,28 +160,25 @@ $(".imgbox").css({height:.7408*h,width:.2057*w})
 $(".info").css({height:.4162*h,width:.2916*w})    
     
 });
-//   $('.dropdown-trigger').dropdown();
-    
-    
-// $('.collapsible').collapsible();
-    
-
 
 
 //NAVBAR MENU    
+var navopen = false;
     $("#openmenu").click(function(){
        $("#navmain").fadeIn(200); 
-        $("#openmenu").animate({left:"-10%"});
-        $("#closemenu").animate({left:"93%"});
+        $("#openmenu").animate({left:"-20vw"});
+        $("#closemenu").animate({left:"90%"});
+        navopen = true;
     });
     
     $("#closemenu").click(function(){
        $("#navmain").fadeOut(200); 
-        $("#openmenu").animate({left:"0%"});
-        $("#closemenu").animate({left:"100%"});
+        $("#openmenu").animate({left:"3%"});
+        $("#closemenu").animate({left:"110%"});
         $(".current").removeClass("current");
         $(".currentleft").removeClass("currentleft").css({display:"none"});
         $("#logo").addClass("currentleft").css({display:"block"});
+        navopen = false;
     });
   
     

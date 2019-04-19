@@ -9,6 +9,7 @@ $(document).ready(function(){
     var prevtime = new Date().getTime();
     prevtime = 0;
     
+//SCROLL ANIMATION    
 document.addEventListener("wheel", function (e) {
     
 
@@ -124,8 +125,8 @@ document.addEventListener("wheel", function (e) {
 
 },true);
     
+//INFOBOX MOUSE ANIMATION
 var card = $(".infobox");
-
 card.on("mousemove",function(e) {  
     
   var ax = -($(window).innerWidth()/2 -e.pageX)/20;
@@ -166,25 +167,42 @@ $(".info").css({height:.4162*h,width:.2916*w})
 // $('.collapsible').collapsible();
     
 
-$(".topic").click(function(){
-    
-  $(".current").toggleClass("current");
-      
-  $(this).toggleClass("current");
-});   
- 
-$(".material-icons").click(function(){
-        
-    heightNav=$(".nav-body").css("height");
-    heightWindow = $("body").css("height");
-    console.log(heightNav + " " + heightWindow);
-    if(heightNav!=heightWindow)
-        $(".nav-body").css({display:"block","height":"100vh"});
-        
-    else if(heightNav == heightWindow)
-    {
-            $(".nav-body").animate({"height":"0px"});
-    }        
+
+
+//NAVBAR MENU    
+    $("#openmenu").click(function(){
+       $("#navmain").fadeIn(200); 
+        $("#openmenu").animate({left:"-10%"});
+        $("#closemenu").animate({left:"93%"});
     });
+    
+    $("#closemenu").click(function(){
+       $("#navmain").fadeOut(200); 
+        $("#openmenu").animate({left:"0%"});
+        $("#closemenu").animate({left:"100%"});
+        $(".current").removeClass("current");
+        $(".currentleft").removeClass("currentleft").css({display:"none"});
+        $("#logo").addClass("currentleft").css({display:"block"});
+    });
+  
+    
+    $("#right ul li").click(function(){  
+        $(".current").toggleClass("current");
+        $(this).children(".menu").toggleClass("current");
+        
+        var id =$(this).children(".menu").attr("id");
+        var idleft = "#"+id + "left";
+        
+        var currentl = $(".currentleft");
+        var futurel = $(idleft);
+        
+        if(currentl != futurel)
+            {
+                currentl.fadeOut(200);
+                futurel.fadeIn(200).addClass("currentleft");
+            } 
+    });   
+ 
+    
 });
 

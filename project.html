@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
+<link rel="stylesheet" href="css/materialize.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -20,36 +20,8 @@
 
 <body>
 
-
-        <ul class="navbar waves-effect">
-            <li>
-                <div class="collapsible-header"><i class="large material-icons">menu</i></div>
-                <div class="nav-body row">
-                    <div class="col s3 nav-left">
-                        <div class="page">
-                            <p class="current topic about">About Us</p>
-                            <p class="underline"></p>
-                        </div><br>
-                        <div class="page">
-                            <p class="topic services">Services Offered</p>
-                            <p class="underline"></p>
-                        </div><br>
-                        <div class="page">
-                            <p class="topic team">Team</p>
-                            <p class="underline"></p>
-                        </div><br>
-                        <div class="page">
-                            <p class="topic contact">Contact Us</p>
-                            <p class="underline"></p>
-                        </div>
-                    </div><!-- col s3 end -->
-                    <div class="col s9 nav-right">
-
-                    </div>
-                </div><!-- row -->
-            </li>
-        </ul>
-   
+    
+    
     <div id="p1" class="wrapper">
         <div class="title">Kira</div>
         <div class="infobox">
@@ -65,6 +37,9 @@
         </div>
     </div>
 
+    <div class="imgbox">
+        
+    </div>
   
 
     <div id="p2" class="wrapper">
@@ -97,7 +72,52 @@
         </div>
     </div>
 
-    <!-- <div id="p4" class="wrapper">
+    <div id="openmenu">
+          <img src="img/Hamburger_icon.svg.png">
+    </div>
+     <div id="closemenu">
+          <img src="img/closemenu.png">
+    </div>
+    <div id="navmain">
+        <div id="left">
+            <div id="logo" class="leftcontent currentleft">
+                SUDODEVS LOGO
+            </div>
+            <div id="aboutleft"  class="leftcontent">
+                Lorem ipsum set amet Lorem ipsum set ametLorem ipsum set ametLorem ipsum set amet
+            </div>
+            <div id="servicesleft"  class="leftcontent">
+                nigga what what nigga what whatnigga what what
+            </div>
+            <div id="contactleft"  class="leftcontent">
+                lolmaxx lolmaxx lolmaxx lolmaxx lolmaxx lolmaxx lolmaxx
+            </div>
+        </div>
+        <div id="right">
+            <ul>
+                <li onmouseover="anim('about')">
+                    <div id="about" class="menu">
+                        ABOU
+                        <div id="rotate">T</div>
+                    </div>
+                </li>
+                <li onmouseover="anim('services')">
+                    <div id="services" class="menu">
+                        SERVICE
+                        <div id="rotate">S</div>
+                    </div>
+                </li>
+                <li onmouseover="anim('contact')">
+                    <div id="contact" class="menu">
+                        CONTAC
+                        <div id="rotate">T</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--
+     <div id="p4" class="wrapper">
         <div class="title">YOLOLMAO</div>
         <div class="infobox">
             <div class="head">
@@ -110,11 +130,12 @@
                 <p class="what-des">very nice</p>
             </div>
         </div>
-    </div> -->
+    </div> 
 
 
 
        </div>
+-->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -124,6 +145,34 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script type="text/javascript">
+        
+        function anim(targetdiv)
+        {
+            var targetletter = $("#"+targetdiv+" #rotate").text();
+            var cont = true;
+            var ascii = targetletter.charCodeAt(0);
+            var pointer = 65;
+            
+            if(cont == true)
+            changechar();
+            
+            function changechar()
+            {
+                cont = false;
+                if(pointer <= ascii)
+                    {
+                        $("#"+targetdiv+" #rotate").text(String.fromCharCode(pointer));
+                        pointer++;
+                        setTimeout(changechar,20);
+                    }
+                else{
+                    $(this).stop;
+                    cont = true;
+                }
+            }
+        }
+    </script>
 
 </body>
 

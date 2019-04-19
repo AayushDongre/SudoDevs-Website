@@ -2,6 +2,16 @@
      -moz-box-sizing: border-box;
      box-sizing: border-box;
 }
+
+html::-webkit-scrollbar{ 
+    width: 0 !important 
+}
+html{
+     overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    
+}
+
 body{
     font-size: 25px;
     background: url("../img/landingbk.png");
@@ -23,13 +33,17 @@ body{
     font-style: normal;
     font-weight: normal;
     line-height: normal;
+    line-height: normal;
+    text-align: center;
+    display: flex;
+    align-content: center;
 
 }
 .para{
     position: relative;
     width: 50%;
     margin:auto;
-    top:-10px;
+
 }
 .title{
     text-transform: uppercase;
@@ -39,14 +53,15 @@ body{
     position: absolute;
     top:70%;
     left: 40%;
-    margin: auto;
+    margin:auto;
     color: white;   
     font-size: 1.5em; 
+    text-decoration: none;
 }
 
 .what::after{
     position: absolute;
-    bottom:15px;
+    bottom:20px;
     left:-30px;
     background:rgb(17,142,147,0.8);
     width:0%;

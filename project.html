@@ -9,8 +9,11 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/materialize.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -18,8 +21,6 @@
 </head>
 
 <body>
-
-    
     
     <div id="p1" class="wrapper">
         <div class="title">Kira</div>
@@ -71,12 +72,21 @@
         </div>
     </div>
 
+    
+    
+    
     <div id="openmenu">
         <i class="fas fa-bars"></i>
+    </div>  
+    <div id="social">
+        <a href="index.html"><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
     </div>
      <div id="closemenu">
             <i class="fas fa-times"></i>
     </div>
+    
+    
     <div id="navmain">
         <div id="left">
             <div id="logo" class="leftcontent currentleft">
@@ -87,11 +97,61 @@
             </div>
             <div id="servicesleft"  class="leftcontent">
                 nigga what what nigga what whatnigga what what
-            </div>
+            </div><!--Services left -->
+            
             <div id="contactleft"  class="leftcontent">
-                lolmaxx lolmaxx lolmaxx lolmaxx lolmaxx lolmaxx lolmaxx
-            </div>
-        </div>
+                <div class="row">
+
+                    
+                    
+                    
+                    
+                    
+                    <form class="col s12">
+                      
+                        <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">account_circle</i>
+                          <input id="name" type="text">
+                          <label for="name">Name</label>
+                        </div>
+                      </div>
+                        
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">email</i>
+                          <input id="email" type="email" class="validate">
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">check_box_outline_blank
+</i>
+                                <select multiple>
+                                    <option value="" disabled >Interested In</option>
+                                    <option value="1">Website development</option>
+                                    <option value="1">Web App</option>
+                                    <option value="1">Chatbot</option>
+                                    <option value="1">Ecommerce</option>
+                                    <option value="1">Cloud Computing</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div> <!-- Conntact left -->
+        </div><!--left -->
+            
         <div id="right">
             <ul>
                 <li onmouseover="anim('about')">
@@ -115,26 +175,7 @@
             </ul>
         </div>
     </div>
-<!--
-     <div id="p4" class="wrapper">
-        <div class="title">YOLOLMAO</div>
-        <div class="infobox">
-            <div class="head">
-                <h2 class="info-title">YOLOLMAO</h2>
-                <p class="info-des">k go home now</p>
-            </div>
 
-            <div class="description">
-                <h3 class="what-title">What we did?</h3>
-                <p class="what-des">very nice</p>
-            </div>
-        </div>
-    </div> 
-
-
-
-       </div>
--->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -143,31 +184,32 @@
     <script src="js/script.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="js/materialize.min.js"></script>
     <script type="text/javascript">
         
+       var ongoing = false;
         function anim(targetdiv)
         {
             var targetletter = $("#"+targetdiv+" #rotate").text();
-            var cont = true;
             var ascii = targetletter.charCodeAt(0);
             var pointer = 65;
             
-            if(cont == true)
+            if(ongoing == false)
             changechar();
             
             function changechar()
             {
-                cont = false;
+                ongoing = true;
                 if(pointer <= ascii)
-                    {
+                    {   
+                        ongoing = true;
                         $("#"+targetdiv+" #rotate").text(String.fromCharCode(pointer));
                         pointer++;
                         setTimeout(changechar,20);
                     }
                 else{
                     $(this).stop;
-                    cont = true;
+                    ongoing = false;
                 }
             }
         }

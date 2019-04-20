@@ -198,7 +198,10 @@ var navopen = false;
                 futurel.fadeIn(200).addClass("currentleft");
             } 
     });   
- 
+
     
+//PLUGIN INITIALIZATIONS    
+$('select').formSelect(); //contact form select
+  
 });
 

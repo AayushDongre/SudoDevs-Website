@@ -226,12 +226,14 @@ body{
     height: 100vh;
     width:100%;
     position: fixed;
+    left:0;
+    top:0;
     display: none;
 }
 #left{
     height:100vh;
     width:50%;
-    background-color: #fcfcfc;
+    background-color: #fcfcfc;;
     box-shadow: 10px 0px 30px rgba(0,0,0,0.4);
     position: absolute;
     z-index: 999;
@@ -239,10 +241,11 @@ body{
 #right{
     height:100vh;
     width:50%;
-    background-color: #f1f1f1;
+/*    background-color: #f1f1f1 */
+    background-color: #ffc200;
     position: absolute;
     left: 50%;
-    z-index: 99;
+    z-index: 998;
 }
 #right ul{
     list-style: none;
@@ -269,26 +272,25 @@ body{
     cursor: pointer;
     pointer-events: none;
     transition: all 0.5s;
-    z-index: 9991;
+    z-index: 999;
 }
 #rotate{
     pointer-events: none;
 }
 #right ul li:hover .menu{
-    width: 350px;
+    width: 120%;
 }
 .current{
-    width: 350px;
+    width: 110%;
 }
 #openmenu,#closemenu{
-    height: 100px;
-    width: 100px;
-    /* font-size: 90px; */
+    height: 2rem;
+    width: 2rem;
     position: absolute;
     z-index: 999;
     color: white;
-    top:5%;
-    left:0;
+    top:2%;
+    left:2.5%;
     transform: translateY(-50%);
     color:black;
     font-size: 5rem;    
@@ -297,16 +299,37 @@ body{
     left:120vw;
 }
 #openmenu .fas,#closemenu .fas{
-    position: relative;
+    position:absolute;
     font-size: 3rem;
-    left:10%;
-    top:10%;
+    left:0;
+    top:0;
+}
+#social{
+    height:2.6rem;
+    width:13rem;
+    margin:0 auto;
+    font-size: 2.3rem;
+/*    position:absolute;*/
+    z-index: 2000;
+    top:2%;
+    left:40%;
+}
+#social i{
+    color:black;
+    margin:0px 2rem;
+    z-index: 2000;
 }
 .leftcontent{
     height:100vh;
     width:50%;
     font-size: 4rem;
     display: none;
+}
+#contactleft{
+    font-size: 1rem;
+    margin:2rem auto;
+    
+    width: 80%
 }
 .currentleft{
     display: block;

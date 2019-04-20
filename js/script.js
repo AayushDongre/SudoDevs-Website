@@ -8,11 +8,11 @@ $(document).ready(function(){
     $(".imgbox").css({background:"url(img/"+back+")","background-size":"cover"});
     var prevtime = new Date().getTime();
     prevtime = 0;
-    
+    $(".page").css("color",$("#p1 .title").css("color"));
+
 //SCROLL ANIMATION    
 document.addEventListener("wheel", function (e) {
     
-
     var currenttime = new Date().getTime();
      var difference = currenttime - prevtime;
 
@@ -24,6 +24,10 @@ document.addEventListener("wheel", function (e) {
              if(i==3)
               i = 0;
         back =  i + ".jpg";
+    //  Change counter color
+        $(".counter .page").text(i+1);
+        var color = $("#p"+(i+1)+" .title").css("color");
+        $(".page").css("color",color);
 
         $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
             $(this).css({background:"url(img/"+back+")","background-size":"cover"});
@@ -72,11 +76,18 @@ document.addEventListener("wheel", function (e) {
     
     else if(e.deltaY<=0  && difference > 1300 && navopen==false)//UP
     {
-                i=i-1;
-
+        i=i-1;
         if(i==-1)
-        i = 3;
+        i = 2;
         back =  i + ".jpg";
+
+        //  Change counter color
+        $(".counter .page").text(i+1);
+        var color = $("#p"+(i+1)+" .title").css("color");
+        $(".page").css("color",color);
+
+
+
       $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
             $(this).css({background:"url(img/"+back+")","background-size":"cover"});
             $(this).dequeue();
@@ -121,8 +132,6 @@ document.addEventListener("wheel", function (e) {
         prevtime = currenttime;
     }
     
-            
-
 },true);
     
 //INFOBOX MOUSE ANIMATION
@@ -168,6 +177,10 @@ var navopen = false;
        $("#navmain").fadeIn(200); 
         $("#openmenu").animate({left:"-20vw"});
         $("#closemenu").animate({left:"90%"});
+
+        if($(window).outerWidth()<=600)
+        $("#closemenu").css({display:"block"});
+        
         navopen = true;
     });
     
@@ -178,6 +191,9 @@ var navopen = false;
         $(".current").removeClass("current");
         $(".currentleft").removeClass("currentleft").css({display:"none"});
         $("#logo").addClass("currentleft").css({display:"block"});
+        if($(window).outerWidth()<=600)
+        $("#closemenu").css({display:"none"});
+
         navopen = false;
     });
   

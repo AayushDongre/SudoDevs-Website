@@ -72,7 +72,18 @@
       width: 100%; 
     } 
 }  
-
+@keyframes arrowdown
+{
+    0%{
+        top:85%;
+    }
+    50%{
+        top:90%;
+    }
+    100%{
+        top:85%;
+    }
+}
 /*#########################  ANIMATON CLASSES  ################################################*/
 .img-in{
     animation: img-in 1s ease-out;
@@ -117,7 +128,7 @@ body{
     color:#6F7C84
 }
 #p1 .title{
-    color: #fff
+    color: #ffd94f
 }
 #p2 .title{
     color:#C5B660
@@ -340,7 +351,14 @@ body{
 .formsubmit:hover{
     background: #ffd94f
 }
-
+.counter{
+    font-size: 3rem;
+    position: absolute;
+    top:80%;
+    left:20%;
+    font-weight: bolder;
+    color:white;
+}
 @media only screen and (max-width: 600px) {
     html {
       overflow: hidden;
@@ -358,8 +376,7 @@ body{
         max-width: 100vw;
         max-height: 100vh;
     }
-   
-   
+     
     .imgbox{
     display: none
     }
@@ -378,10 +395,8 @@ body{
         position: relative;
         left: 0;
         top:0;
-        min-width: 100vw;
-        max-width: 100vw;
-        max-height: 30%;
-        min-height: 10%;
+        width: 100%;
+        height: 50vh;
     }
     #openmenu,#closemenu{
         position: absolute;
@@ -405,6 +420,8 @@ body{
     .leftcontent{
         width: 100%;
         height: 50vh;
+        overflow-y: scroll;
+        margin:0
     }
     #contactleft{
         overflow-y: scroll;
@@ -420,7 +437,19 @@ body{
     #left{
         font-size: 2rem;
     }
+    #closemenu{
+        display: none;
+    }
+    .leftcontent .arrow{
+        position: absolute;
+        top:80%;
+        left:90%;
+        animation:arrowdown .8s infinite;
+    }
     .fas{
         /* color:white; */
+    }
+    .counter{
+        left:2%;
     }
   }

@@ -126,14 +126,14 @@ body{
     color:#FF8752
 }
 
-.wrapper{
+/* .wrapper{
     position: absolute;
-/*    background: rgba(54,23,66,0.2);*/
+   background: rgba(54,23,66,0.2);
 /*    border: solid 1px red;*/
-    top:0;
+    /* top:0;
     left:0;
  
-}
+} */ 
 .imgbox{
     background-size: cover; 
     position: fixed;
@@ -265,7 +265,7 @@ body{
 .menu{
     height: 90px;
     width: 0px;
-    background: #58B1A6;
+    background: #198e96;
     display: flex;
     position: absolute;
     left:-1%;
@@ -310,14 +310,14 @@ body{
     margin:0 auto;
     font-size: 2.3rem;
 /*    position:absolute;*/
-    z-index: 2000;
+    z-index: 999;
     top:2%;
     left:40%;
 }
 #social i{
     color:black;
     margin:0px 2rem;
-    z-index: 2000;
+    z-index: 20000;
 }
 .leftcontent{
     height:100vh;
@@ -328,13 +328,17 @@ body{
 #contactleft{
     font-size: 1rem;
     margin:2rem auto;
-    
     width: 80%
 }
 .currentleft{
     display: block;
 }
-
+.formsubmit{
+    background: #ffc200;
+}
+.formsubmit:hover{
+    background: #ffd94f
+}
 
 @media only screen and (max-width: 600px) {
     html {

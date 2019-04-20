@@ -202,6 +202,6 @@ var navopen = false;
     
 //PLUGIN INITIALIZATIONS    
 $('select').formSelect(); //contact form select
-  
+
 });
 

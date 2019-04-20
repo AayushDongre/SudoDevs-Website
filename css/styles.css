@@ -237,6 +237,7 @@ body{
     box-shadow: 10px 0px 30px rgba(0,0,0,0.4);
     position: absolute;
     z-index: 999;
+    overflow: hidden;
 }
 #right{
     height:100vh;
@@ -391,6 +392,7 @@ body{
         left:0;
         height:50vh;
         top:50%;
+        z-index: 999;
     }
     
     #left{
@@ -398,6 +400,19 @@ body{
         left:0;
         height:50vh;
         top:0%;
+        z-index: 1000
+    }
+    .leftcontent{
+        width: 100%;
+        height: 50vh;
+    }
+    #contactleft{
+        overflow-y: scroll;
+    }
+    #right ul{
+        position: absolute;
+        top:0%;
+        left:1%
     }
     #right ul li{
         font-size:3rem; 

@@ -240,6 +240,7 @@ var navopen = false;
         if($(window).outerWidth()<=600)
         $("#closemenu").css({display:"block"});
         
+        $(".rightarrow,.leftarrow").css("display","none");
         navopen = true;
     });
     //IF CLOSE BUTTON IS PRESSED
@@ -252,6 +253,7 @@ var navopen = false;
         $("#logo").addClass("currentleft").css({display:"block"});
         if($(window).outerWidth()<=600)
         $("#closemenu").css({display:"none"});
+        $(".rightarrow,.leftarrow").css("display","block");
 
         navopen = false;
     });

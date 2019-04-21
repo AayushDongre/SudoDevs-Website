@@ -438,7 +438,7 @@ body{
         left:0;
         height:50vh;
         top:0%;
-        z-index: 1000
+        z-index: 1000;
     }
     .leftcontent{
         width: 100%;
@@ -480,7 +480,7 @@ body{
         position: absolute;
         color:#ffc200;
         top:45%;
-        z-index: 800;
+        z-index: 10;
     }
     .rightarrow{
         right:0%;

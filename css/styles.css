@@ -73,13 +73,13 @@
 @keyframes arrowdown
 {
     0%{
-        top:85%;
+        top:40%;
     }
     50%{
-        top:90%;
+        top:45%;
     }
     100%{
-        top:85%;
+        top:40%;
     }
 }
 @keyframes leftarrow
@@ -265,21 +265,24 @@ body{
 }
 #left{
     height:100vh;
-    width:50%;
-    background-color: #fcfcfc;;
+    width:100%;
+    background-color: rgba(255,255,255,1);
+    color: white;
+    background: url("../1.jpg");
+    background-size: cover;
     box-shadow: 10px 0px 30px rgba(0,0,0,0.4);
     position: absolute;
-    z-index: 999;
+    z-index: 998;
     overflow: hidden;
 }
 #right{
     height:100vh;
     width:50%;
-/*    background-color: #f1f1f1 */
-    background-color: #ffc200;
+    background-color: rgba(0,0,0,0.6);
+    background-size: cover;
     position: absolute;
     left: 50%;
-    z-index: 998;
+    z-index: 999;
 }
 #right ul{
     list-style: none;
@@ -287,35 +290,47 @@ body{
     padding: 0;
     position: absolute;
     top:30%;
-    left:-1%;
+    right: 50px;
 }
 
 #right ul li{
-    height:100px;
+    height:6rem;
     width:350px;
     font-size: 5rem;
     line-height: 100px;
 }
+
 .menu{
     height: 90px;
     width: 0px;
     background: #198e96;
     display: flex;
-    position: absolute;
-    left:-1%;
+    justify-content: flex-end;
+    position: absolute; 
+    left:100%;
     cursor: pointer;
     pointer-events: none;
     transition: all 0.5s;
-    z-index: 999;
+    z-index: 999;   
+    font-size: 2.8rem;
+    color:#656565;
 }
 #rotate{
     pointer-events: none;
 }
-#right ul li:hover .menu{
-    width: 120%;
-}
+
 .current{
-    width: 110%;
+    font-size: 5rem;
+    color:white;
+}
+.rightfooter{
+    color:#656565;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 10px;
+    bottom:10px;
+    width: 100%;
 }
 #openmenu,#closemenu{
     height: 2rem;
@@ -326,8 +341,7 @@ body{
     top:2%;
     left:2.5%;
     transform: translateY(-50%);
-    color:black;
-    font-size: 5rem;    
+    font-size: 5rem; 
 }
 #closemenu{
     left:120vw;
@@ -361,8 +375,8 @@ body{
 }
 #contactleft{
     font-size: 1rem;
-    margin:2rem auto;
-    width: 80%
+    margin:2rem;
+    width: 45%
 }
 .currentleft{
     display: block;
@@ -381,6 +395,24 @@ body{
     font-weight: bolder;
     color:white;
 }
+#servicesleft{
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+#servicesleft::-webkit-scrollbar{ 
+    width: 0 !important 
+}
+.service{
+    height:30vh;
+    margin: 2px auto;
+}
+#aboutleft{
+    width:50%;
+    font-size:3rem;
+    /* position: absolute; */
+}
+
 @media only screen and (max-width: 600px) {
     html {
       overflow: hidden;
@@ -430,15 +462,18 @@ body{
         left:0;
         height:50vh;
         top:50%;
-        z-index: 999;
+        z-index: 1000;
+        color: white;
     }
-    
+    .menu{
+        color:white;
+    }
     #left{
         width:100%;
         left:0;
-        height:50vh;
+        height:100vh;
         top:0%;
-        z-index: 1000;
+        z-index: 999;
     }
     .leftcontent{
         width: 100%;
@@ -448,14 +483,19 @@ body{
     }
     #contactleft{
         overflow-y: scroll;
+        width: 90%;
+    }
+    #aboutleft{
+        width: 100%;
     }
     #right ul{
         position: absolute;
         top:0%;
-        left:1%
+        left:1%;
     }
     #right ul li{
         font-size:3rem; 
+        
     }
     #left{
         font-size: 2rem;
@@ -465,7 +505,7 @@ body{
     }
     .leftcontent .arrow{
         position: absolute;
-        top:80%;
+        top:45%;
         left:90%;
         animation:arrowdown .8s infinite;
     }

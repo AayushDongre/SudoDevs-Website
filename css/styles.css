@@ -138,7 +138,6 @@ body{
     overflow:hidden;
      background: url("../img/eh.png");
     background-size: cover;
-/*    background-size: cover;*/
     height: 100vh;
 /*    background: #fcfcfc;*/
 }
@@ -266,7 +265,7 @@ body{
 #left{
     height:100vh;
     width:100%;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(0,0,0,1);
     color: white;
     background: url("../1.jpg");
     background-size: cover;
@@ -278,7 +277,7 @@ body{
 #right{
     height:100vh;
     width:50%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.8);
     background-size: cover;
     position: absolute;
     left: 50%;
@@ -314,6 +313,9 @@ body{
     z-index: 999;   
     font-size: 2.8rem;
     color:#656565;
+}
+#right ul li:hover .menu{
+    color:#eee;
 }
 #rotate{
     pointer-events: none;
@@ -378,14 +380,18 @@ body{
     margin:2rem;
     width: 45%
 }
+#contactleft form{
+    background: rgba(200,200,200,0.2);
+    height: 90vh;
+}
 .currentleft{
     display: block;
 }
 .formsubmit{
-    background: #ffc200;
+    background-color:red
 }
 .formsubmit:hover{
-    background: #ffd94f
+    background-color: red;
 }
 .counter{
     font-size: 3rem;
@@ -531,3 +537,4 @@ body{
         animation: leftarrow 1.5s infinite;
     }
   }
+  

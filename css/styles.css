@@ -106,6 +106,10 @@
         right:0;
     }
 }
+@font-face {
+    font-family: averta;
+    src: url("../img/Font-Averta/AvertaDemoPE-Regular.ttf");
+  }
 /*#########################  ANIMATON CLASSES  ################################################*/
 .img-in{
     animation: img-in 1s ease-out;
@@ -139,7 +143,6 @@ body{
      background: url("../img/eh.png");
     background-size: cover;
     height: 100vh;
-/*    background: #fcfcfc;*/
 }
 #p2,#p3,#p4{
     opacity: 0;
@@ -157,15 +160,6 @@ body{
 #p3 .title{
     color:#FF8752
 }
-
-/* .wrapper{
-    position: absolute;
-   background: rgba(54,23,66,0.2);
-/*    border: solid 1px red;*/
-    /* top:0;
-    left:0;
- 
-} */ 
 .imgbox{
     background-size: cover; 
     position: fixed;
@@ -267,7 +261,7 @@ body{
     width:100%;
     background-color: rgba(0,0,0,1);
     color: white;
-    background: url("../1.jpg");
+    background: url("../img/background.jpg");
     background-size: cover;
     box-shadow: 10px 0px 30px rgba(0,0,0,0.4);
     position: absolute;
@@ -276,12 +270,21 @@ body{
 }
 #right{
     height:100vh;
-    width:50%;
-    background-color: rgba(0,0,0,0.8);
+    width:40%;
+    background-color: rgba(0,0,0,0);
     background-size: cover;
     position: absolute;
-    left: 50%;
+    left:60%;
     z-index: 999;
+}
+.blend{
+    content: "a";
+    background: rgba(0,0,0,0.74);
+    mix-blend-mode: overlay;
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    left:60%;
 }
 #right ul{
     list-style: none;
@@ -297,12 +300,12 @@ body{
     width:350px;
     font-size: 5rem;
     line-height: 100px;
+    
 }
 
 .menu{
     height: 90px;
     width: 0px;
-    background: #198e96;
     display: flex;
     justify-content: flex-end;
     position: absolute; 
@@ -311,8 +314,14 @@ body{
     pointer-events: none;
     transition: all 0.5s;
     z-index: 999;   
-    font-size: 2.8rem;
-    color:#656565;
+    font-size: 3.2rem;
+    font-family: averta;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 4.2rem;
+    text-align: right;
+    color: rgba(255, 253, 253, 0.4);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #right ul li:hover .menu{
     color:#eee;
@@ -322,8 +331,15 @@ body{
 }
 
 .current{
-    font-size: 5rem;
-    color:white;
+    font-family: averta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7.2rem;
+    text-align: right;
+    letter-spacing: -0.09rem;
+    color: rgba(255, 253, 253, 0.93);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    
 }
 .rightfooter{
     color:#656565;
@@ -357,32 +373,33 @@ body{
 #social{
     height:2.6rem;
     width:13rem;
-    margin:0 auto;
-    font-size: 2.3rem;
-/*    position:absolute;*/
+    margin:0;
+    font-size: 2rem;
     z-index: 999;
     top:2%;
-    left:40%;
+    left:50%;
+    z-index: 999;
+    position: absolute;
 }
 #social i{
-    color:black;
-    margin:0px 2rem;
+    color:white;
+    margin:0px 5px;
     z-index: 20000;
 }
 .leftcontent{
     height:100vh;
-    width:50%;
+    width:60%;
     font-size: 4rem;
     display: none;
 }
 #contactleft{
     font-size: 1rem;
-    margin:2rem;
-    width: 45%
+    margin:5rem 4rem;
+    width: 50%
 }
 #contactleft form{
     background: rgba(200,200,200,0.2);
-    height: 90vh;
+    height: 80vh;
 }
 .currentleft{
     display: block;
@@ -409,14 +426,37 @@ body{
 #servicesleft::-webkit-scrollbar{ 
     width: 0 !important 
 }
+.r{
+    text-align: center;
+}
 .service{
-    height:30vh;
-    margin: 2px auto;
+    display: inline-block;
+    height:8.5rem;
+    width: 10.7rem;
+    background: rgba(10, 9, 9, 0.74);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 0rem;
+    margin-left: 5rem;
+}
+#service1,#service2,#service3{
+    margin-top:6rem;
+}
+#service1,#service4,#service7{
+    margin-left: 0px;
+}
+.service img{
+    height: 54%;
+    margin:8% auto; 
+}
+.service p{
+    font-size: 15px;
+    height: 0;
+    position: relative;
+    top:-30px;
 }
 #aboutleft{
-    width:50%;
+    width:60%;
     font-size:3rem;
-    /* position: absolute; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -463,11 +503,11 @@ body{
         position: absolute;
         font-size: 3rem;
     }
-    #right{
+    #right,.blend{
         width:100%;
         left:0;
         height:50vh;
-        top:50%;
+        top:60%;
         z-index: 1000;
         color: white;
     }
@@ -483,13 +523,23 @@ body{
     }
     .leftcontent{
         width: 100%;
-        height: 50vh;
+        height: 60vh;
         overflow-y: scroll;
         margin:0
     }
     #contactleft{
         overflow-y: scroll;
         width: 90%;
+        height: 50vh;
+    }
+    #contactleft form{
+        margin:0;
+        padding: 0;
+        width: 100%;
+        z-index: 999;
+      
+        /* background: #ffc200; */
+      
     }
     #aboutleft{
         width: 100%;
@@ -497,7 +547,7 @@ body{
     #right ul{
         position: absolute;
         top:0%;
-        left:1%;
+        right: 1%;
     }
     #right ul li{
         font-size:3rem; 
@@ -514,6 +564,15 @@ body{
         top:45%;
         left:90%;
         animation:arrowdown .8s infinite;
+    }
+    .service{
+        margin:0;
+    }
+    #service1,#service2,#service3{
+        margin-top:0rem;
+    }
+    #service9{
+        margin-left: -7px;
     }
     .fas{
         /* color:white; */

@@ -21,11 +21,11 @@
 </head>
 
 <body>
-    <div id="social">
+    <!-- <div id="social">
         <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-    </div>
-
+    </div> -->
+        
    <div class="counter"><span class="page">1</span>/3 </div>
    
    <i class="material-icons leftarrow hide-on-med-and-up">chevron_left</i>
@@ -82,8 +82,6 @@
     </div>
 
     
-    
-    
     <div id="openmenu">
         <i class="fas fa-bars"></i>
     </div>  
@@ -91,10 +89,18 @@
      <div id="closemenu">
             <i class="fas fa-times"></i>
     </div>
-    
-    
+
     <div id="navmain">
+           
         <div id="left">
+            
+            <div id="social">
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            </div>
+
+            <div class="blend"></div>
+            
             <div id="logo" class="leftcontent currentleft">
                 SUDODEVS LOGO
             </div>
@@ -103,26 +109,19 @@
             </div>
 
             <div id="servicesleft"  class="leftcontent">
-                <div class="row">
-                    <div class="service col s12 m4">Service 1</div>
-                    <div class="service col s12 m4">Service 2</div>
-                    <div class="service col s12 m4">Service 3</div>
+                <div class="r">
+                    <div class="service" id="service1"><img src="img/webdes.png"><p>Web Design</p></div>
+                    <div class="service" id="service2"><img src="img/webdev.png"><p>Web Development</p></div>
+                    <div class="service" id="service3"><img src="img/webapp.png"><p>Web Apps</p></div>
+               
+                    <div class="service" id="service4"><img src="img/ecom.png"><p>E-Commerce</p></div>
+                    <div class="service" id="service5"><img src="img/mlsol.png"><p>ML Solutions</p></div>
+                    <div class="service" id="service6"><img src="img/ideaapp.png"><p>Idea Application</p></div>
+             
+                    <div class="service" id="service7"><img src="img/chatbots.png"><p>Chatbots</p></div>
+                    <div class="service" id="service8"><img src="img/cloudsol.png"><p>Cloud Solutions</p></div>
+                    <div class="service" id="service9"><img src="img/clientsol.png"><p>Client Solutions</p></div>
                 </div>
-                <div class="row">
-                    <div class="service col s12 m4">Service 4</div>
-                    <div class="service col s12 m4">Service 5</div>
-                    <div class="service col s12 m4">Service 6</div>
-                </div>
-                <div class="row">
-                    <div class="service col s12 m4">Service 7</div>
-                    <div class="service col s12 m4">Service 8</div>
-                    <div class="service col s12 m4">Service 9</div>
-                </div>
-                <div class="row">
-                        <div class="service col s12 m4">Service 10</div>
-                        <div class="service col s12 m4">Service 11</div>
-                        <div class="service col s12 m4">Service 12</div>
-                    </div>
             </div><!--Services left -->
             
             <div id="contactleft"  class="leftcontent">
@@ -182,20 +181,20 @@
             <ul>
                 <li onmouseover="anim('services')">
                     <div id="services" class="menu">
-                        SERVICE
-                        <div id="rotate">S</div>
+                        Service
+                        <div id="rotate">s</div>
                     </div>
                 </li>
                  <li onmouseover="anim('about')">
                     <div id="about" class="menu">
-                        ABOU 
-                        <div id="rotate">T</div> 
+                        Abou
+                        <div id="rotate">t</div> 
                     </div>
                 </li>
                 <li onmouseover="anim('contact')">
                     <div id="contact" class="menu">
-                        CONTAC
-                        <div id="rotate">T</div>
+                        Contac
+                        <div id="rotate">t</div>
                     </div>
                 </li>
             </ul>
@@ -223,7 +222,7 @@
         {
             var targetletter = $("#"+targetdiv+" #rotate").text();
             var ascii = targetletter.charCodeAt(0);
-            var pointer = 65;
+            var pointer = 97;
             
             if(ongoing == false)
             changechar();

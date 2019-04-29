@@ -289,7 +289,7 @@ $("#right ul li").click(function(){
             futurel.fadeIn(200).addClass("currentleft");
         } 
         var current_navBk = $("#left").css("background").substring(48,58);
-
+        console.log(current_navBk);
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
         {
             $("#left").css({background:""});

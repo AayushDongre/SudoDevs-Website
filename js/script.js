@@ -290,6 +290,7 @@ $("#right ul li").click(function(){
         } 
         var current_navBk = $("#left").css("background").substring(48,58);
         console.log(current_navBk);
+        console.log($("#left").css("background"));
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
         {
             $("#left").css({background:""});

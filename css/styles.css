@@ -62,8 +62,6 @@
     }
     
 }
-
-
 @keyframes underline
 { 0%{ 
        width: 0; 
@@ -72,7 +70,50 @@
       width: 100%; 
     } 
 }  
-
+@keyframes arrowdown
+{
+    0%{
+        top:50%;
+    }
+    50%{
+        top:55%;
+    }
+    100%{
+        top:50%;
+    }
+}
+@keyframes leftarrow
+{
+    0%{
+        left:0;
+    }
+    50%{
+        left:-3%;
+    }
+    100%{
+        left:0;
+    }
+}
+@keyframes rightarrow
+{
+    0%{
+        right:0;
+    }
+    50%{
+        right:-3%;
+    }
+    100%{
+        right:0;
+    }
+}
+@font-face {
+    font-family: averta;
+    src: url("../img/Fonts/AvertaDemoPE-Regular.ttf");
+  }
+  @font-face{
+      font-family: electroharmonix;
+      src:url("../img/Fonts/electroharmonix.ttf");
+  }
 /*#########################  ANIMATON CLASSES  ################################################*/
 .img-in{
     animation: img-in 1s ease-out;
@@ -103,7 +144,9 @@
 body{
     font-size: 12px;
     overflow:hidden;
-    /* background: blue; */
+     /* background: url("../img/eh.png");
+    background-size: cover; */
+    background: #000;
     height: 100vh;
 }
 #p2,#p3,#p4{
@@ -114,22 +157,15 @@ body{
     color:#6F7C84
 }
 #p1 .title{
-    color: #245D64
+    color: rgba(207, 0, 15, 0.76);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 #p2 .title{
     color:#C5B660
 }
 #p3 .title{
-    color:#FF8752
-}
-
-.wrapper{
-    position: absolute;
-/*    background: rgba(54,23,66,0.2);*/
-/*    border: solid 1px red;*/
-    top:0;
-    left:0;
- 
+    color: #C1006F;
+    font-family:electroharmonix;
 }
 .imgbox{
     background-size: cover; 
@@ -139,46 +175,56 @@ body{
     top:15.98%;
     left:60.88%;
     z-index: -2;
+    mix-blend-mode: normal;
 }
 /*#########################################  INFOBOX  ###############################*/
 .infobox{
-    background: rgba(255,255,255,0.9);
     position: absolute;
     height: 41.62%;
     width: 29.16%;
     top:30.39%;
     left:35.15%;
     box-shadow: 4px 4px 50px 2px #222; 
-   z-index: 12;
+   z-index: -1;
 }
-.infobox::after{
-    content: "";
-    position: absolute;
-    display: block;
-    top:0;
-    left:50%;
-    width:50%;
-    height: 100%;
-    background: rgba(255,255,255,1);
-   z-index: -50;
+#p1 .infobox{
+    background: linear-gradient(90.56deg, rgba(207, 0, 15, 0.7268) -58.06%, rgba(232, 84, 155, 0.1472) 98.44%);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
 }
-
-
+#p2 .infobox{
+    background: linear-gradient(90.06deg, rgba(26, 188, 156, 0.8) -52.09%, rgba(30, 67, 3, 0.8) 73.21%);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px)
+}
+#p3 .infobox{
+    background: linear-gradient(90.56deg, rgba(68, 27, 199, 0.92) -58.06%, rgba(196, 4, 176, 0.1472) 98.44%);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
 .head{
     position:absolute;
-    top:27.13%;
-    left:9.4%;
-    
+    top:15.13%;
+    left:15.4%;
+    color: #FEF8F8;    
 }
 .title{
     font-size: 10em;
     position:absolute;
     top:35.29%;
-    left:26.52%;
+    right: 55%;
     animation-delay: .2s;
+    z-index: -50;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 15rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
-
-
 .head .info-title{
     position: relative;
     top:4px;
@@ -192,14 +238,20 @@ body{
     position: relative;
     margin: 0;
     padding: 0;
-    color:#5A5A5A;
-    animation-delay: 1.7s;
+   animation-delay: 1.7s;
 }
 .description{
     position: absolute;
     width: 100%;
     top: 78.2%;
-    left:9.4%;
+    left:15.4%;
+    font-family: Averta Demo PE;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 18px;*/
+    line-height: 22px; 
+    color: rgba(252, 246, 246, 0.56);
+
 }
 .description .what-title{
     position: relative;
@@ -208,153 +260,462 @@ body{
     top:4px;
     margin: 0;
     padding: 0;
-    color: #B3B3B3;
+    color: white;
 }
 .description .what-des{
     position: relative;
     margin: 0;
     padding: 0;
-    color:#5a5a5a;
+    color:white;
     opacity: 1;
 }
-/*################################################### NAVBAR ##########################################*/
-.navbar{
-    position:absolute;
-    margin:0;
+
+#navmain{
+    height: 100vh;
     width:100%;
-    z-index: 20;
-    /* background: red; */
+    position: fixed;
+    left:0;
+    top:0;
+    display: none;
 }
-
-.nav-body{
-    position: relative  ;
-    height: 0;
-    transition: 1s;
-    transition-timing-function: cubic-bezier(.77, .19, .27, .99);
-    width:100vw;
-    background: rgba(255,255,255,1);
-    /* background: green; */
-}
-.nav-left{
-    position: relative;
-    height: 90%;
-    top:1px;
-    font-size:2.5em;
-    background: rgba(211, 198, 195, 0.41);
-    border-radius: 20px;
-    padding: 0;
-    margin-left: 20px;
-}
-.nav-right{
-    position: relative;
-    height: 90%;
-    top:1px;
-    font-size:2.5em;
-    border-radius: 20px;
-    padding: 0;
-    margin-left: 20px;
-}
-/*########################################  NAVBAR LIST  ###########################*/
-.page{
-    display:inline-block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-.page p{
-    display: inline-block;
-}
-
-.page .underline{
-    position: absolute;
-    top:2.5em;
-    height: 20px;
-    padding: 0;
-    margin: 0;
-    width:0%;
-    background:url("../img/Rectangle%205.1.png");
+#left{
+    height:100vh;
+    width:100%;
+    background-color: rgba(0,0,0,1);
+    color: white;
+    background: url("../img/navbk1.png");
     background-size: cover;
-}
-.current .underline{
-    width:100%;
-    background: red;
-}
-.topic{
-    position: relative;
-    z-index: 1;
-    margin: 10px 0px
-}
-.topic:before{
+    box-shadow: 10px 0px 30px rgba(0,0,0,0.4);
     position: absolute;
-    height: 7.14px;
-    width: 0%;
-    content: "";
-    background:#ff4f58;
-    border-radius: 7.14px;
-    top:68%;
-    z-index: -1;
-    transition: .8s;
-    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47)
+    z-index: 998;
+    overflow: hidden;
 }
-.topic:hover:before{
-    width: 90%;
+#right{
+    height:100vh;
+    width:40%;
+    background-color: rgba(0,0,0,0);
+    background-size: cover;
+    position: absolute;
+    left:60%;
+    z-index: 999;
 }
-.current:before{
+.blend{
+    content: "a";
+    background: rgba(0,0,0,0.74);
+    mix-blend-mode: overlay;
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    left:60%;
+}
+#right ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:30%;
+    right: 50px;
+}
+
+#right ul li{
+    height:6rem;
+    width:350px;
+    font-size: 5rem;
+    line-height: 100px;
+    
+}
+
+.menu{
+    height: 90px;
+    width: 0px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute; 
+    left:100%;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.5s;
+    z-index: 999;   
+    font-size: 3.2rem;
+    font-family: averta;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 4.2rem;
+    text-align: right;
+    color: rgba(255, 253, 253, 0.4);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#right ul li:hover .menu{
+    color:#eee;
+}
+#rotate{
+    pointer-events: none;
+}
+
+.current{
+    font-family: averta;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7.2rem;
+    text-align: right;
+    letter-spacing: -0.09rem;
+    color: rgba(255, 253, 253, 0.93);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    
+}
+.rightfooter{
+    color:#656565;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 10px;
+    bottom:10px;
     width: 100%;
+}
+#openmenu,#closemenu{
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    z-index: 999;
+    color: white;
+    top:1.7rem;
+    left:2.5%;
+    transform: translateY(-50%);
+    font-size: 1rem; 
+}
+#closemenu{
+    left:120vw;
+}
+#openmenu .fas,#closemenu .fas{
+    position:absolute;
+    font-size: 2rem;
+    left:0;
+    top:0;
+}
+#social,#socialmain{
+    /* height:2.6rem; */
+    width:13rem;
+    margin:0;
+    font-size: 2rem;
+    z-index: 999;
+    top:0px;
+    left:50%;
+    z-index: 999;
+    position: absolute;
+}
+#socialmain{
+    position: static;
+    margin:0 auto;
+}
+#social i,#socialmain i{
+    color:white;
+    margin-left:5px;
+    z-index: 20000;
+}
+#socialmain i{
+    margin:1rem 15px;
+}
+.leftcontent{
+    height:100vh;
+    width:60%;
+    font-size: 4rem;
+    display: none;
+}
+#contactleft{
+    font-size: 1rem;
+    margin:5rem 4rem;
+    width: 50%
+}
+#contactleft form{
+    background: rgba(200,200,200,0.2);
+    height: 80vh;
+}
+.currentleft{
+    display: block;
+}
+.formsubmit{
+    margin:0 auto;
+    background: rgb(252,208,94,0.8);
+}
+.formsubmit:hover{
+    background: rgb(241, 186, 46);
+}
+.counter{
+    position: absolute;
+    top:80%;
+    left:20%;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.6rem;
+    line-height: 6.2rem;
+    text-align: center;
+
+color: rgba(255, 253, 253, 0.65);
+}
+#servicesleft{
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+#servicesleft::-webkit-scrollbar{ 
+    width: 0 !important 
+}
+.r{
+    text-align: center;
+}
+.service{
+    display: inline-block;
+    height:8.5rem;
+    width: 10.7rem;
+    background: rgba(10, 9, 9, 0.74);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 0rem;
+    margin-left: 5rem;
+}
+#service1,#service2,#service3{
+    margin-top:6rem;
+}
+#service1,#service4,#service7{
+    margin-left: 0px;
+}
+.service img{
+    height: 54%;
+    margin:8% auto; 
+}
+.service p{
+    font-size: 15px;
+    height: 0;
+    position: relative;
+    top:-30px;
+}
+#ContactUsIcon{
+    color:#A7A7A7;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    position: absolute;
+    right:2rem;
+    top:1rem;
+}
+.whichpage{
+    color:white;
+    position: absolute;
+    left:7rem;
+    top:0.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: averta;
+}
+.whichpage span{
+    font-size: 1rem;
+    line-height: 1rem;
+    position: relative;
+    left:5px;
+    color:#968f8f;
+    font-family: Playfair Display;
+}
+#logo{
+    position: absolute;
+    top:5rem;
+}
+#aboutleft{
+    width:60%;
+    margin:6rem 2rem;
+    padding: 0 4rem;
+    font-size:3rem;
+}
+.whowe{
+    font-family: Karla;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 0px;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    mix-blend-mode: overlay;
+    text-shadow: 2px 10px 6px rgba(0, 0, 0, 0.25);
+}
+.whoans{
+    font-family: Averta Demo PE;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    position: relative;
+    top:-10px;
+}
+#aboutleft p{
+    font-family: Averta Demo PE;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: rgba(255, 249, 249, 0.71);
+    position: relative;
+    top:-15px;
+    margin-bottom: 70px;
 }
 @media only screen and (max-width: 600px) {
     html {
-      background-color: lightblue;
       overflow: hidden;
-      font-size: 15px;
       max-width: 100vw;;
       max-height: 100vh;
-        
     }
   
     body{
         overflow: hidden;
         max-height: 100vh;
         max-width: 100vw;
-      
+      font-size: 12px;
     }
     #p1,#p2,#p3,#p4{
         max-width: 100vw;
         max-height: 100vh;
-    }
-   
-    
-    .nav-main{
-        background: #22ffaa;
-        max-width: 100px;
-    }
-    .nav-body{
-        min-width:100vw;
+        z-index: 800;
+        /* opacity: 0; */
     }
     .imgbox{
     display: none
     }
     .title{
-        position: relative;
+        position: absolute;
         left:0;
-        top:20px;        
-        font-size: 8rem;
-        max-width: 90vw;
+        top:6vh;        
+        font-size: 4.4rem;
+
+        max-width: 80vw;
 
     }
     .what-title,.what-des,.description{
         max-width: 90vw;
     }
     .infobox{
-        position: relative;
+        position: absolute;
         left: 0;
-        top:0;
-        min-width: 100vw;
-        max-width: 100vw;
-        max-height: 30%;
-        min-height: 10%;
+        top:25vh;
+        width: 100%;
+        height: 50vh;
     }
-    .nav-left{
-        min-width:100%;
+    .head{
+        left:10px;
+    }
+    .description{
+        left:10px;
+    }
+    #openmenu,#closemenu{
+        position: absolute;
+        font-size: 3rem;
+    }
+    #right,.blend{
+        width:100%;
+        left:0;
+        height:50vh;
+        top:60%;
+        z-index: 1000;
+        color: white;
+    }
+    #right{
+        border-top:solid 5px white;
+    }
+    .menu{
+        color:white;
+    }
+    #left{
+        width:100%;
+        left:0;
+        height:100vh;
+        top:0%;
+        z-index: 999;
+        padding: 0;
+        margin: 0;
+    }
+    .leftcontent{
+        width: 100%;
+        height: 50vh;
+        overflow-y: scroll;
+        margin:0
+    }
+    #contactleft{
+        overflow-y: scroll;
+        width: 90%;
+        height: 50vh;
+        margin-top:15%;
+        margin-left:2rem;
+    }
+    #contactleft form{
+        margin:0;
+        padding: 0;
+        width: 100%;
+        height: 65vh;
+        z-index: 999;      
+    }
+    .formsubmit{
+        margin-left:30%;
+    }
+    #aboutleft{
+        width: 100%;
+    }
+    #right ul{
+        position: absolute;
+        top:5%;
+        right: 1%;
+    }
+    #right ul li{
+        font-size:3rem; 
+        
+    }
+    #left{
+        font-size: 2rem;
+    }
+    #closemenu{
+        display: none;
+    }
+    .leftcontent .arrow{
+        position: absolute;
+        top:55%;
+        left:90%;
+        animation:arrowdown .8s infinite;
+    }
+    .service{
+        margin:0;
+    }
+    #servicesleft{
+        margin-top:3rem;
+    }
+    #service1,#service2,#service3{
+        margin-top:0rem;
+    }
+    #service9{
+        margin-left: -7px;
+    }
+    .fas{
+        /* color:white; */
+    }
+    .counter{
+        left:2%;
+    }
+    .rightarrow,.leftarrow{
+        font-size: 6rem;
+        position: absolute;
+        color:#ffc200;
+        top:45%;
+        z-index: 10;
+    }
+    .rightarrow{
+        right:0%;
+        animation: rightarrow 1.5s infinite;
+    }
+    .leftarrow{
+        left:0%;
+        animation: leftarrow 1.5s infinite;
+    }
+    #social{
+        display: none;
+    }
+    #whichpagemain{
+        display: none;
     }
   }
+  

@@ -276,7 +276,24 @@ $("#right ul li").click(function(){
             } 
 });   
 
+//CONTACT US MAIN MENU CLICK ANIMATION
+$("#ContactUsIcon").click(function(){
+    $("#navmain").fadeIn(200); 
+    $("#openmenu").animate({left:"-20vw"});
+    $("#closemenu").animate({left:"90%"});
+
+    if($(window).outerWidth()<=600)
+    $("#closemenu").css({display:"block"});
     
+    $(".rightarrow,.leftarrow").css("display","none");
+    navopen = true;
+
+    $(".current").removeClass("current");
+    $("#contact").addClass("current");
+    $(".currentleft").fadeOut(200).removeClass("currentleft");
+    $("#contactleft").fadeIn(200).addClass("currentleft");
+}); 
+
 //PLUGIN INITIALIZATIONS    
 $('select').formSelect(); //contact form select
 

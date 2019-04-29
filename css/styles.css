@@ -73,13 +73,13 @@
 @keyframes arrowdown
 {
     0%{
-        top:40%;
+        top:50%;
     }
     50%{
-        top:45%;
+        top:55%;
     }
     100%{
-        top:40%;
+        top:50%;
     }
 }
 @keyframes leftarrow
@@ -140,8 +140,9 @@
 body{
     font-size: 12px;
     overflow:hidden;
-     background: url("../img/eh.png");
-    background-size: cover;
+     /* background: url("../img/eh.png");
+    background-size: cover; */
+    background: #000;
     height: 100vh;
 }
 #p2,#p3,#p4{
@@ -152,7 +153,8 @@ body{
     color:#6F7C84
 }
 #p1 .title{
-    color: #ffd94f
+    color: rgba(207, 0, 15, 0.76);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 #p2 .title{
     color:#C5B660
@@ -168,10 +170,13 @@ body{
     top:15.98%;
     left:60.88%;
     z-index: -2;
+    mix-blend-mode: normal;
 }
 /*#########################################  INFOBOX  ###############################*/
 .infobox{
-    background: rgba(255,255,255,0.9);
+    background: linear-gradient(90.56deg, rgba(207, 0, 15, 0.7268) -58.06%, rgba(232, 84, 155, 0.1472) 98.44%);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
     position: absolute;
     height: 41.62%;
     width: 29.16%;
@@ -180,35 +185,30 @@ body{
     box-shadow: 4px 4px 50px 2px #222; 
    z-index: -1;
 }
-.infobox::after{
-    content: "";
-    position: absolute;
-    display: block;
-    top:0;
-    left:50%;
-    width:50%;
-    height: 100%;
-    background: rgba(255,255,255,1);
-   z-index: -50;
-}
-
 
 .head{
     position:absolute;
-    top:27.13%;
-    left:9.4%;
-    
+    top:15.13%;
+    left:15.4%;
+    color: #FEF8F8;    
 }
 .title{
     font-size: 10em;
     position:absolute;
     top:35.29%;
-    left:26.52%;
+    right: 55%;
     animation-delay: .2s;
     z-index: -50;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 15rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
-
-
 .head .info-title{
     position: relative;
     top:4px;
@@ -222,14 +222,20 @@ body{
     position: relative;
     margin: 0;
     padding: 0;
-    color:#5A5A5A;
-    animation-delay: 1.7s;
+   animation-delay: 1.7s;
 }
 .description{
     position: absolute;
     width: 100%;
     top: 78.2%;
-    left:9.4%;
+    left:15.4%;
+    font-family: Averta Demo PE;
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 18px;*/
+    line-height: 22px; 
+    color: rgba(252, 246, 246, 0.56);
+
 }
 .description .what-title{
     position: relative;
@@ -238,13 +244,13 @@ body{
     top:4px;
     margin: 0;
     padding: 0;
-    color: #B3B3B3;
+    color: white;
 }
 .description .what-des{
     position: relative;
     margin: 0;
     padding: 0;
-    color:#5a5a5a;
+    color:white;
     opacity: 1;
 }
 
@@ -356,35 +362,42 @@ body{
     position: absolute;
     z-index: 999;
     color: white;
-    top:2%;
+    top:1.7rem;
     left:2.5%;
     transform: translateY(-50%);
-    font-size: 5rem; 
+    font-size: 1rem; 
 }
 #closemenu{
     left:120vw;
 }
 #openmenu .fas,#closemenu .fas{
     position:absolute;
-    font-size: 3rem;
+    font-size: 2rem;
     left:0;
     top:0;
 }
-#social{
-    height:2.6rem;
+#social,#socialmain{
+    /* height:2.6rem; */
     width:13rem;
     margin:0;
     font-size: 2rem;
     z-index: 999;
-    top:2%;
+    top:0px;.8rem;
     left:50%;
     z-index: 999;
     position: absolute;
 }
-#social i{
+#socialmain{
+    position: static;
+    margin:0 auto;
+}
+#social i,#socialmain i{
     color:white;
-    margin:0px 5px;
+    margin-left:5px;
     z-index: 20000;
+}
+#socialmain i{
+    margin:1rem 15px;
 }
 .leftcontent{
     height:100vh;
@@ -406,16 +419,23 @@ body{
 }
 .formsubmit{
     margin:0 auto;
+    background: rgb(252,208,94,0.8);
 }
 .formsubmit:hover{
+    background: rgb(241, 186, 46);
 }
 .counter{
-    font-size: 3rem;
     position: absolute;
     top:80%;
     left:20%;
-    font-weight: bolder;
-    color:white;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.6rem;
+    line-height: 6.2rem;
+    text-align: center;
+
+color: rgba(255, 253, 253, 0.65);
 }
 #servicesleft{
     overflow-y: scroll;
@@ -455,9 +475,39 @@ body{
 }
 #aboutleft{
     width:60%;
+    margin:5rem 1rem;
     font-size:3rem;
 }
-
+#ContactUsIcon{
+    color:#A7A7A7;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    position: absolute;
+    right:2rem;
+    top:1rem;
+}
+.whichpage{
+    color:white;
+    position: absolute;
+    left:7rem;
+    top:0.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-family: averta;
+}
+.whichpage span{
+    font-size: 1rem;
+    line-height: 1rem;
+    position: relative;
+    left:5px;
+    color:#968f8f;
+    font-family: Playfair Display;
+}
+#logo{
+    position: absolute;
+    top:5rem;
+}
 @media only screen and (max-width: 600px) {
     html {
       overflow: hidden;
@@ -484,8 +534,9 @@ body{
         position: absolute;
         left:0;
         top:6vh;        
-        font-size: 8rem;
-        max-width: 90vw;
+        font-size: 5rem;
+
+        max-width: 80vw;
 
     }
     .what-title,.what-des,.description{
@@ -498,6 +549,12 @@ body{
         width: 100%;
         height: 50vh;
     }
+    .head{
+        left:10px;
+    }
+    .description{
+        left:10px;
+    }
     #openmenu,#closemenu{
         position: absolute;
         font-size: 3rem;
@@ -509,6 +566,9 @@ body{
         top:60%;
         z-index: 1000;
         color: white;
+    }
+    #right{
+        border-top:solid 5px white;
     }
     .menu{
         color:white;
@@ -524,7 +584,7 @@ body{
     }
     .leftcontent{
         width: 100%;
-        height: 60vh;
+        height: 50vh;
         overflow-y: scroll;
         margin:0
     }
@@ -550,7 +610,7 @@ body{
     }
     #right ul{
         position: absolute;
-        top:0%;
+        top:5%;
         right: 1%;
     }
     #right ul li{
@@ -565,12 +625,15 @@ body{
     }
     .leftcontent .arrow{
         position: absolute;
-        top:45%;
+        top:55%;
         left:90%;
         animation:arrowdown .8s infinite;
     }
     .service{
         margin:0;
+    }
+    #servicesleft{
+        margin-top:3rem;
     }
     #service1,#service2,#service3{
         margin-top:0rem;
@@ -598,6 +661,12 @@ body{
     .leftarrow{
         left:0%;
         animation: leftarrow 1.5s infinite;
+    }
+    #social{
+        display: none;
+    }
+    #whichpagemain{
+        display: none;
     }
   }
   

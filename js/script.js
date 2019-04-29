@@ -2,14 +2,20 @@ $(document).ready(function(){
  
 
     var current = $("#p1");
-    current.children("div.title").delay(1200).css({opacity:"0",top:"-50px"}).animate({top:"35.29%",opacity:"1"});
-    current.children("div.infobox").children("div.head").children("h2.info-title").delay(900).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
-    current.children("div.infobox").delay(700).css({opacity:"0"}).animate({opacity:"1"});
-    $("div.imgbox").delay(700).css({opacity:"0"}).animate({opacity:"1"},200);
-    $("div.counter").delay(700).css({opacity:"0"}).animate({opacity:"1"},200);
-    current.children("div.infobox").children("div.head").children("p.info-des").delay(800).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"}); 
-    current.children("div.infobox").children("div.description").children("p.what-des").delay(800).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
     
+    if($(window).outerWidth()<=600)
+        current.children("div.title").delay(1200).css({opacity:"0",top:"-50px"}).animate({top:"6vh",opacity:"1"});
+    else
+        current.children("div.title").delay(1200).css({opacity:"0",top:"-50px"}).animate({top:"35.29%",opacity:"1"});
+    
+        current.children("div.infobox").children("div.head").children("h2.info-title").delay(900).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
+    current.children("div.infobox").css({opacity:"0"}).delay(700).animate({opacity:"1"});
+    $("div.imgbox").css({opacity:"0"}).delay(700).animate({opacity:"1"},200);
+    $("div.counter").css({opacity:"0"}).delay(700).animate({opacity:"1"},200);
+    current.children("div.infobox").children("div.head").children("p.info-des").css({opacity:"0",top:"-50px"}).delay(800).animate({top:"",opacity:"1"}); 
+    current.children("div.infobox").children("div.description").children("p.what-des").css({opacity:"0",top:"-50px"}).delay(800).animate({top:"",opacity:"1"});
+    
+
     var i = 0;
     var back =  i + ".jpg";
 

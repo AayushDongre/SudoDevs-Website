@@ -405,10 +405,9 @@ body{
     display: block;
 }
 .formsubmit{
-    background-color:red
+    margin:0 auto;
 }
 .formsubmit:hover{
-    background-color: red;
 }
 .counter{
     font-size: 3rem;
@@ -520,6 +519,8 @@ body{
         height:100vh;
         top:0%;
         z-index: 999;
+        padding: 0;
+        margin: 0;
     }
     .leftcontent{
         width: 100%;
@@ -531,15 +532,18 @@ body{
         overflow-y: scroll;
         width: 90%;
         height: 50vh;
+        margin-top:15%;
+        margin-left:2rem;
     }
     #contactleft form{
         margin:0;
         padding: 0;
         width: 100%;
-        z-index: 999;
-      
-        /* background: #ffc200; */
-      
+        height: 65vh;
+        z-index: 999;      
+    }
+    .formsubmit{
+        margin-left:30%;
     }
     #aboutleft{
         width: 100%;

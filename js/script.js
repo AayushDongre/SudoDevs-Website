@@ -2,10 +2,18 @@ $(document).ready(function(){
  
 
     var current = $("#p1");
+    current.children("div.title").delay(1200).css({opacity:"0",top:"-50px"}).animate({top:"35.29%",opacity:"1"});
+    current.children("div.infobox").children("div.head").children("h2.info-title").delay(900).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
+    current.children("div.infobox").delay(700).css({opacity:"0"}).animate({opacity:"1"});
+    $("div.imgbox").delay(700).css({opacity:"0"}).animate({opacity:"1"},200);
+    $("div.counter").delay(700).css({opacity:"0"}).animate({opacity:"1"},200);
+    current.children("div.infobox").children("div.head").children("p.info-des").delay(800).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"}); 
+    current.children("div.infobox").children("div.description").children("p.what-des").delay(800).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
+    
     var i = 0;
     var back =  i + ".jpg";
 
-    $(".imgbox").css({background:"url(img/"+back+")","background-size":"cover"});
+    $(".imgbox").css({background:"url(img/projects/"+back+")","background-size":"cover"});
     var prevtime = new Date().getTime();
     prevtime = 0;
     $(".page").css("color",$("#p1 .title").css("color"));
@@ -31,7 +39,7 @@ document.addEventListener("wheel", function (e) {
         $(".page").css("color",color);
         //CHANGE IMGBOX IMAGE
         $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
-            $(this).css({background:"url(img/"+back+")","background-size":"cover"});
+            $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
             $(this).dequeue();
         }).delay(500).animate({width:"20.57%",left:"60.88%"},650);
         //ERASE CURRENT ELEMENTS
@@ -77,7 +85,7 @@ document.addEventListener("wheel", function (e) {
 
         //CHANGE IMGBOX IMAGE
         $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
-            $(this).css({background:"url(img/"+back+")","background-size":"cover"});
+            $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
             $(this).dequeue();
         }).delay(500).animate({width:"20.57%",left:"60.88%"},650);
 
@@ -270,10 +278,20 @@ $("#right ul li").click(function(){
         var futurel = $(idleft);
         
         if(currentl != futurel)
-            {
-                currentl.fadeOut(200);
-                futurel.fadeIn(200).addClass("currentleft");
-            } 
+        {
+            currentl.fadeOut(200);
+            futurel.fadeIn(200).addClass("currentleft");
+        } 
+        var current_navBk = $("#left").css("background").substring(48,58);
+
+        if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
+        {
+            $("#left").css({background:""});
+        }
+       if($("#about").hasClass("current"))
+        {
+            $("#left").css({background:"url('img/navbk2.png')"});
+        }
 });   
 
 //CONTACT US MAIN MENU CLICK ANIMATION
@@ -298,4 +316,5 @@ $("#ContactUsIcon").click(function(){
 $('select').formSelect(); //contact form select
 
 });
+
 

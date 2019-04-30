@@ -42,8 +42,7 @@ body{
 .para{
     position: relative;
     width: 50%;
-    margin:auto;
-
+    margin:auto
 }
 .title{
     text-transform: uppercase;
@@ -53,7 +52,7 @@ body{
     position: absolute;
     top:70%;
     left: 40%;
-    margin:auto;
+    /* margin:auto auto; */
     color: white;   
     font-size: 1.5em; 
     text-decoration: none;
@@ -74,7 +73,6 @@ body{
     width: 130%;
 }
 
-
 @media only screen and (max-width: 600px) {
    body{
        font-size: 20px
@@ -87,7 +85,7 @@ body{
 }
 .title{
     text-transform: uppercase;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
 }
 .what{
     position: absolute;
@@ -106,7 +104,7 @@ body{
         min-width: 100vw;
         height:100vh;
         transform: scale(3);
-            position: fixed;
-            z-index: -100;
+        position: fixed;
+        z-index: -100;
     }
 }

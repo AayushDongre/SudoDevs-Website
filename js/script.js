@@ -1,5 +1,6 @@
 $(document).ready(function(){
- 
+    
+    $(".counter .outof").text($(".wrapper").length);
 
     var current = $("#p1");
     
@@ -17,28 +18,19 @@ $(document).ready(function(){
     
 
     var i = 0;
-    var back =  i + ".jpg";
+    var back =  i + ".png";
 
     $(".imgbox").css({background:"url(img/projects/"+back+")","background-size":"cover"});
     var prevtime = new Date().getTime();
     prevtime = 0;
     $(".page").css("color",$("#p1 .title").css("color"));
 
-//SCROLL ANIMATION    
-document.addEventListener("wheel", function (e) {
-    
-    var currenttime = new Date().getTime();
-     var difference = currenttime - prevtime;
-
-    // console.log(e.deltaY + " " + difference + " " + back);
-    
-    //MOUSE SCROLLED DOWN
-    if(e.deltaY>=0 && difference > 2700 && navopen==false)
+    function scrolldown()
     {
-             i=i+1;
-             if(i==3)
-              i = 0;
-        back =  i + ".jpg";
+        i=i+1;
+        if(i==$(".wrapper").length)
+         i = 0;
+        back =  i + ".png";
         //CHANGE COUNTER COLOR AND COUNT
         $(".counter .page").text(i+1);
         var color = $("#p"+(i+1)+" .title").css("color");
@@ -53,36 +45,33 @@ document.addEventListener("wheel", function (e) {
         current.children("div.infobox").children("div.head").children("h2.info-title").delay(600).animate({top:"-50px",opacity:"0"});
         current.children("div.infobox").children("div.head").children("p.info-des").delay(500).animate({top:"-50px",opacity:"0"});
         current.children("div.infobox").children("div.description").children("p.what-des").delay(600).animate({top:"-50px",opacity:"0"});
-         
+            
         current.delay(700).animate({opacity:0},500);
         //CHECK IF LAST ELEMENT
-        if(current.attr("id")!="p3"){
+        console.log(current.attr("id").substring(1));
+        if(current.attr("id").substring(1)!=$(".wrapper").length.toString()){
             current = current.next();
             if(current.attr("class")=="imgbox")
                 current=current.next();
         }
-        else if(current.attr("id")=="p3"){
+        else if(current.attr("id").substring(1)==$(".wrapper").length.toString()){
             current = $("#p1");
         }
-       
+        
         current.delay(1400).animate({opacity:1},500);
         
         //SPAWN CURRENT ELEMENTS
         current.children("div.title").delay(2000).css({opacity:"0",top:"100%"}).animate({top:"35.29%",opacity:"1"});
         current.children("div.infobox").children("div.head").children("h2.info-title").delay(1700).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"});
         current.children("div.infobox").children("div.head").children("p.info-des").delay(1600).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"}); 
-        current.children("div.infobox").children("div.description").children("p.what-des").delay(1600).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"});
-        
-        prevtime = currenttime;
-    }//SCROLL DOWN END
-
-    //MOUSE SCROLLED UP
-    else if(e.deltaY<=0  && difference > 2700 && navopen==false)
+        current.children("div.infobox").children("div.description").children("p.what-des").delay(1600).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"}); 
+    }
+    function scrollup()
     {
         i=i-1;
         if(i==-1)
-        i = 2;
-        back =  i + ".jpg";
+        i = $(".wrapper").length-1;
+        back =  i + ".png";
 
         //CHANGE COUNTER COLOR AND COUNT
         $(".counter .page").text(i+1);
@@ -109,7 +98,7 @@ document.addEventListener("wheel", function (e) {
                 current=current.prev();
         }
         else if(current.attr("id")=="p1"){
-            current = $("#p3");
+            current = $("#p"+$(".wrapper").length.toString());
         }      
         
         current.delay(1400).animate({opacity:1},500);
@@ -120,6 +109,26 @@ document.addEventListener("wheel", function (e) {
         current.children("div.infobox").children("div.head").children("p.info-des").delay(1600).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"}); 
         current.children("div.infobox").children("div.description").children("p.what-des").delay(1600).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
 
+    }
+//SCROLL ANIMATION    
+document.addEventListener("wheel", function (e) {
+    
+    var currenttime = new Date().getTime();
+     var difference = currenttime - prevtime;
+
+    // console.log(e.deltaY + " " + difference + " " + back);
+    
+    //MOUSE SCROLLED DOWN
+    if(e.deltaY>=0 && difference > 2700 && navopen==false)
+    {
+        scrolldown();
+        prevtime = currenttime;
+    }//SCROLL DOWN END
+
+    //MOUSE SCROLLED UP
+    else if(e.deltaY<=0  && difference > 2700 && navopen==false)
+    {
+        scrollup();
         prevtime = currenttime;
     }//SCROLL UP END
     
@@ -133,39 +142,7 @@ $(".rightarrow").click(function(){
     var difference = currenttime - prevtime;
     if(difference >= 2700)
     {
-        i=i+1;
-        if(i==3)
-        i = 0;
-        
-
-        //CHANGE COUNTER COLOR AND COUNT
-        $(".counter .page").text(i+1);
-        var color = $("#p"+(i+1)+" .title").css("color");
-        $(".page").css("color",color);
-        //ERASE CURRENT ELEMENTS
-        current.children("div.title").delay(800).animate({top:"-50px",opacity:"0"});
-        current.children("div.infobox").children("div.head").children("h2.info-title").delay(600).animate({top:"-50px",opacity:"0"});
-        current.children("div.infobox").children("div.head").children("p.info-des").delay(500).animate({top:"-50px",opacity:"0"});
-        current.children("div.infobox").children("div.description").children("p.what-des").delay(600).animate({top:"-50px",opacity:"0"});
-    
-        current.delay(700).animate({opacity:0},500);
-        //CHECK IF LAST ELEMENT
-        if(current.attr("id")!="p3"){
-        current = current.next();
-        if(current.attr("class")=="imgbox")
-            current=current.next();
-        }
-        else if(current.attr("id")=="p3"){
-        current = $("#p1");
-        }
-
-        current.delay(1400).animate({opacity:1},500);
-        //SPAWN CURRENT ELEMENTS
-        current.children("div.title").delay(2000).css({opacity:"0",top:"100%"}).animate({top:"6vh",opacity:"1"});
-        current.children("div.infobox").children("div.head").children("h2.info-title").delay(1700).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"});
-        current.children("div.infobox").children("div.head").children("p.info-des").delay(1600).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"}); 
-        current.children("div.infobox").children("div.description").children("p.what-des").delay(1600).css({opacity:"0",top:"100%"}).animate({top:"",opacity:"1"});
-
+        scrolldown();
         prevtime = currenttime;
     }
 });//RIGHT ARROW CLICK END
@@ -176,35 +153,7 @@ $(".leftarrow").click(function(){
     var difference = currenttime - prevtime;
     if(difference >= 2700)
     {
-        i=i-1;
-        if(i==-1)
-        i = 2;
-        //CHANGE COUNTER COLOR AND COUNT
-        $(".counter .page").text(i+1);
-        var color = $("#p"+(i+1)+" .title").css("color");
-        $(".page").css("color",color);
-        //ERASE CURRENT ELEMENTS    
-        current.children("div.title").delay(800).animate({opacity:"0",top:"100%"});
-        current.children("div.infobox").children("div.head").children("h2.info-title").delay(600).animate({opacity:"0",top:"50px"});
-        current.children("div.infobox").children("div.head").children("p.info-des").delay(500).animate({opacity:"0",top:"50px"}); 
-        current.children("div.infobox").children("div.description").children("p.what-des").delay(600).animate({opacity:"0",top:"50px"});
-        current.delay(700).animate({opacity:0},500);
-        //CHECK IF FIRST ELEMENT
-        if(current.attr("id")!="p1"){
-            current = current.prev();
-            if(current.attr("class")=="imgbox")
-                current=current.prev();
-        }
-        else if(current.attr("id")=="p1"){
-            current = $("#p3");
-        }      
-        //SPAWN CURRENT ELEMENTS    
-        current.delay(1400).animate({opacity:1},500);
-        current.children("div.title").delay(2000).css({opacity:"0",top:"-50px"}).animate({top:"6vh",opacity:"1"});
-        current.children("div.infobox").children("div.head").children("h2.info-title").delay(1700).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
-        current.children("div.infobox").children("div.head").children("p.info-des").delay(1600).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"}); 
-        current.children("div.infobox").children("div.description").children("p.what-des").delay(1600).css({opacity:"0",top:"-50px"}).animate({top:"",opacity:"1"});
-        
+        scrollup();
         prevtime = currenttime;
     } 
 });//LEFT ARROW CLICK END
@@ -247,7 +196,7 @@ $(".info").css({height:.4162*h,width:.2916*w})
 var navopen = false;
     //IF OPEN BUTTON IS PRESSED
     $("#openmenu").click(function(){
-       $("#navmain").fadeIn(200); 
+       $("#navmain").fadeIn(800); 
         $("#openmenu").animate({left:"-20vw"});
         $("#closemenu").animate({left:"90%"});
 
@@ -259,7 +208,7 @@ var navopen = false;
     });
     //IF CLOSE BUTTON IS PRESSED
     $("#closemenu").click(function(){
-       $("#navmain").fadeOut(200); 
+       $("#navmain").fadeOut(800); 
         $("#openmenu").animate({left:"3%"});
         $("#closemenu").animate({left:"110%"});
         $(".current").removeClass("current");
@@ -268,6 +217,8 @@ var navopen = false;
         if($(window).outerWidth()<=600)
         $("#closemenu").css({display:"none"});
         $(".rightarrow,.leftarrow").css("display","block");
+        
+        $("#left").css({background:""});
 
         navopen = false;
     });
@@ -285,10 +236,10 @@ $("#right ul li").click(function(){
         
         if(currentl != futurel)
         {
-            currentl.fadeOut(200);
-            futurel.fadeIn(200).addClass("currentleft");
+            currentl.fadeOut(500);
+            futurel.fadeIn(500).addClass("currentleft");
         } 
-        var current_navBk = $("#left").css("background").substring(47,57);
+        var current_navBk = $("#left").css("background").substring(48,58);
         console.log(current_navBk);
         console.log($("#left").css("background"));
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
@@ -322,6 +273,5 @@ $("#ContactUsIcon").click(function(){
 //PLUGIN INITIALIZATIONS    
 $('select').formSelect(); //contact form select
 
+
 });
-
-

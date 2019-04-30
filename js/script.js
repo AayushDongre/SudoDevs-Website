@@ -239,7 +239,7 @@ $("#right ul li").click(function(){
             currentl.fadeOut(500);
             futurel.fadeIn(500).addClass("currentleft");
         } 
-        var current_navBk = $("#left").css("background").substring(48,58);
+        var current_navBk = $("#left").css("background").substring(47,57);
         console.log(current_navBk);
         console.log($("#left").css("background"));
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")

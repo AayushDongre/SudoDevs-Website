@@ -855,6 +855,9 @@ color: rgba(255, 253, 253, 0.65);
     .whowe{
         line-height: 2rem;
     }
+    .logoblock{
+        width:21%;
+    }
   }
   .vintshim{
     letter-spacing: 0.05em;

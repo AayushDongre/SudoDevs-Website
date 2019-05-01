@@ -260,7 +260,7 @@ $("#right ul li").click(function(){
             currentl.fadeOut(500);
             futurel.fadeIn(500).addClass("currentleft");
         } 
-        var current_navBk = $("#left").css("background").substring(47,57);
+        var current_navBk = $("#left").css("background").substring(48,58);
         console.log(current_navBk);
         console.log($("#left").css("background"));
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
@@ -271,16 +271,17 @@ $("#right ul li").click(function(){
         {
             $("#left").css({background:"url('img/navbk2.png')"});
         }
-        if(!$("#logo").hasClass("current") && current_navBk=="navbk3.png")
+
+        if($("current") && current_navBk=="navbk3.png")
         {
             $("#left").css({background:""});
         }
-       if($("#logo").hasClass("current"))
-        {
-            $("#left").css({background:"url('img/navbk3.png')"});
-        }
+ 
 });   
-
+if($(".current").length==0)
+{
+        $("#left").css({background:"url('img/navbk3.png')"});
+}
 //CONTACT US MAIN MENU CLICK ANIMATION
 $("#ContactUsIcon").click(function(){
     $("#navmain").fadeIn(200); 

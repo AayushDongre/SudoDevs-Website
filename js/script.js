@@ -197,7 +197,7 @@ var h = $(window).outerHeight();
 var w = $(window).outerWidth();
 $(".wrapper").css({height:h,width:w})
 $(".wrapper").css({height:h,width:w});
-$(".imgbox").css({height:.7408*h,width:.2057*w})    
+// $(".imgbox").css({height:.7408*h,width:.2057*w})    
 $(".info").css({height:.4162*h,width:.2916*w})   
     
 $(window).resize(function(){
@@ -207,7 +207,7 @@ console.log(w + " " + h);
     
     
 $(".wrapper").css({height:h,width:w});
-$(".imgbox").css({height:.7408*h,width:.2057*w})    
+// $(".imgbox").css({height:.7408*h,width:.2057*w})    
 $(".info").css({height:.4162*h,width:.2916*w})    
     
 });

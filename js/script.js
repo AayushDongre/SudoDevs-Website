@@ -36,10 +36,21 @@ $(document).ready(function(){
         var color = $("#p"+(i+1)+" .title").css("color");
         $(".page").css("color",color);
         //CHANGE IMGBOX IMAGE
-        $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
-            $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
-            $(this).dequeue();
-        }).delay(500).animate({width:"20.57%",left:"60.88%"},650);
+        if($(window).outerWidth()>600)
+        {
+            $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
+                $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
+                $(this).dequeue();
+            }).delay(500).animate({width:"20.57%",left:"60.88%"},650);
+        }
+        else if($(window).outerWidth()<=600)
+        {
+            $(".imgbox").animate({width:0,left:"90vw"},650).queue(function(){
+                $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
+                $(this).dequeue();
+            }).delay(500).animate({width:"90vw",left:"1rem"},650);
+        }
+
         //ERASE CURRENT ELEMENTS
         current.children("div.title").delay(800).animate({top:"-50px",opacity:"0"});
         current.children("div.infobox").children("div.head").children("h2.info-title").delay(600).animate({top:"-50px",opacity:"0"});
@@ -78,12 +89,22 @@ $(document).ready(function(){
         var color = $("#p"+(i+1)+" .title").css("color");
         $(".page").css("color",color);
 
+        
         //CHANGE IMGBOX IMAGE
-        $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
-            $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
-            $(this).dequeue();
-        }).delay(500).animate({width:"20.57%",left:"60.88%"},650);
-
+        if($(window).outerWidth()>600)
+        {
+            $(".imgbox").animate({width:0,left:"81.45%"},650).queue(function(){
+                $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
+                $(this).dequeue();
+            }).delay(500).animate({width:"20.57%",left:"60.88%"},650);
+        }
+        else if($(window).outerWidth()<=600)
+        {
+            $(".imgbox").animate({width:0,left:"90vw"},650).queue(function(){
+                $(this).css({background:"url(img/projects/"+back+")","background-size":"cover"});
+                $(this).dequeue();
+            }).delay(500).animate({width:"90vw",left:"1rem"},650);
+        }
         //ERASE CURRENT ELEMENTS
         current.children("div.title").delay(800).animate({opacity:"0",top:"100%"});
         current.children("div.infobox").children("div.head").children("h2.info-title").delay(600).animate({opacity:"0",top:"50px"});

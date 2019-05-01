@@ -646,7 +646,11 @@ color: rgba(255, 253, 253, 0.65);
         /* opacity: 0; */
     }
     .imgbox{
-    display: none
+        position: absolute;
+        left:1rem;
+        top:4rem;
+        width:90vw;
+        height:30vh !important;
     }
     .title{
         position: absolute;
@@ -662,12 +666,12 @@ color: rgba(255, 253, 253, 0.65);
         font-size: 4rem;
         line-height: 4rem;
         position: absolute;
-        top:13vh !important;
+        top:40vh !important;
     }
     #p1 .title,
     #p2 .title,
     #p3 .title{
-        top:18vh !important;
+        top:40vh !important;
     }
     .what-title,.what-des,.description{
         max-width: 90vw;

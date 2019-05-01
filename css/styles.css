@@ -545,6 +545,9 @@ color: rgba(255, 253, 253, 0.65);
     top:1rem;
     font-family: averta;
 }
+#whichpagemain{
+    left:6rem;
+}
 .whichpage{
     color:white;
     position: absolute;

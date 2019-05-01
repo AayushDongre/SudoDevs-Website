@@ -439,7 +439,6 @@ a,a:visited{
 #openmenu .fas,#closemenu .fas{
     position:absolute;
     font-size: 2rem;
-    left:0;
     top:0;
 }
 #social,#socialmain{
@@ -500,8 +499,7 @@ a,a:visited{
     font-size: 4.6rem;
     line-height: 6.2rem;
     text-align: center;
-
-color: rgba(255, 253, 253, 0.65);
+    color: rgba(255, 253, 253, 0.5  );
 }
 #servicesleft{
     overflow-y: scroll;
@@ -572,6 +570,7 @@ color: rgba(255, 253, 253, 0.65);
 #logo{
     position: absolute;
     top:5rem;
+    font-family: averta;
 }
 #aboutleft{
     width:60%;
@@ -638,6 +637,7 @@ color: rgba(255, 253, 253, 0.65);
     line-height: 4rem;
     color: rgba(255, 253, 253, 0.53);
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    margin: 1em;
 }
 .logolists{
     position: relative;
@@ -649,9 +649,11 @@ color: rgba(255, 253, 253, 0.65);
     height:20vh;
     float:left;
     margin-right:3rem;
+    font-family: averta;
+    margin-top: 0.7em;
 }
 .logoblock .small{
-    font-family: Averta Demo PE;
+    font-family: averta;
     font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;
@@ -660,7 +662,7 @@ color: rgba(255, 253, 253, 0.65);
     color: rgba(255, 253, 253, 0.3);
 }
 .logoblock .big{
-    font-family: Averta Demo PE;
+    font-family: averta;
     font-style: normal;
     font-weight: normal;
     font-size: 2rem;
@@ -669,6 +671,11 @@ color: rgba(255, 253, 253, 0.65);
     color:white;
     position: relative;
     top:-30px;
+}
+.logohead{
+    position: relative;
+    left: 3rem;
+
 }
 @media only screen and (max-width: 600px) {
     html {

@@ -155,6 +155,10 @@ body{
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
 }
+a,a:visited{
+ color: inherit;
+}
+
 #p2,#p3,#p4,#p5{
     opacity: 0;
 }

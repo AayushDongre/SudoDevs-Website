@@ -271,6 +271,14 @@ $("#right ul li").click(function(){
         {
             $("#left").css({background:"url('img/navbk2.png')"});
         }
+        if(!$("#logo").hasClass("current") && current_navBk=="navbk3.png")
+        {
+            $("#left").css({background:""});
+        }
+       if($("#logo").hasClass("current"))
+        {
+            $("#left").css({background:"url('img/navbk3.png')"});
+        }
 });   
 
 //CONTACT US MAIN MENU CLICK ANIMATION

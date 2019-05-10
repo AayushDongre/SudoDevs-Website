@@ -1,3 +1,12 @@
+$(window).on("load", function() {
+    var preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.preloader-wrapper');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+});
+
 $(document).ready(function(){
     
     $(".counter .outof").text($(".wrapper").length);
@@ -325,12 +334,5 @@ $("#ContactUsIcon").click(function(){
 $('select').formSelect(); //contact form select
 
 //Preloader
-$(window).on("load", function() {
-    var preloaderFadeOutTime = 500;
-    function hidePreloader() {
-    var preloader = $('.preloader-wrapper');
-    preloader.fadeOut(preloaderFadeOutTime);
-    }
-    hidePreloader();
-    });
+
 });

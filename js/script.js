@@ -225,6 +225,9 @@ var navopen = false;
         $("#closemenu").css({display:"block"});
         
         $(".rightarrow,.leftarrow").css("display","none");
+
+          $("#left").css({background:"url('img/navbk3.png')"});
+
         navopen = true;
     });
     //IF CLOSE BUTTON IS PRESSED
@@ -239,11 +242,11 @@ var navopen = false;
         $("#closemenu").css({display:"none"});
         $(".rightarrow,.leftarrow").css("display","block");
         
-        $("#left").css({background:""});
+        $("#left").css({background:"url('img/navbk3.png')"});
 
         navopen = false;
     });
-  
+
 //NAVMENU RIGHT WIDTH ANIMATION    
 $("#right ul li").click(function(){  
         $(".current").toggleClass("current");
@@ -261,8 +264,10 @@ $("#right ul li").click(function(){
             futurel.fadeIn(500).addClass("currentleft");
         } 
         var current_navBk = $("#left").css("background").substring(48,58);
+
+        console.log($(".current").length);
         console.log(current_navBk);
-        console.log($("#left").css("background"));
+        
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
         {
             $("#left").css({background:""});
@@ -272,16 +277,17 @@ $("#right ul li").click(function(){
             $("#left").css({background:"url('img/navbk2.png')"});
         }
 
-        if($("current") && current_navBk=="navbk3.png")
+        if($(".current") && current_navBk=="navbk3.png")
         {
             $("#left").css({background:""});
         }
+        if($(".current").length==0)
+        {
+            alert("Adf");
+        }
  
 });   
-if($(".current").length==0)
-{
-        $("#left").css({background:"url('img/navbk3.png')"});
-}
+
 //CONTACT US MAIN MENU CLICK ANIMATION
 $("#ContactUsIcon").click(function(){
     $("#navmain").fadeIn(200); 

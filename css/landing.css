@@ -1,3 +1,37 @@
+/*###########################  font declaration  #################################*/
+ @font-face {
+    font-family: averta;
+    src: url("../img/Fonts/AvertaDemoPE-Regular.ttf");
+  }
+  @font-face{
+      font-family: electroharmonix;
+      src:url("../img/Fonts/electroharmonix.ttf");
+  }
+
+ @font-face {
+    font-family: audreyn;
+    src: url("../img/Fonts/audreyn.otf");
+  }
+   @font-face {
+    font-family: audrey;
+    src: url("../img/Fonts/audrey.otf");
+  }
+  @font-face{
+      font-family: audreybold;
+      src:url("../img/Fonts/audreybold.otf");
+  }
+  @font-face {
+    font-family: bebas;
+    src: url("../img/Fonts/bebas.ttf");
+  }
+  @font-face{
+      font-family: bebasbold;
+      src:url("../img/Fonts/bebasbold.ttf");
+  }
+
+/*###########################  font declaration  #################################*/
+
+
 *{ -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
      box-sizing: border-box;
@@ -48,30 +82,78 @@ body{
     text-transform: uppercase;
     font-size: 1.5em;
 }
+
+ /* Changes kw*/
 .what{
+  color : rgb(17,142,147,0.8);
     position: absolute;
     top:70%;
     left: 40%;
     /* margin:auto auto; */
     color: white;   
-    font-size: 1.5em; 
+    font-size: 1.3em;
     text-decoration: none;
+   color : white;
+   border-top : 3px solid rgb(17,142,147,0.8);
+     border-bottom : 3px solid rgb(17,142,147,0.8);
+   border-radius : 4px;
+   padding : 5px;      
+             background : none;
 }
+ 
+
+       .what:hover{
+       animation :ctext;
+       animation-duration : 1s;
+       animation-fill-mode : forwards;
+
+  }
+    @keyframes ctext {
+  from {}
+  to {   background :grey;
+     color: white;
+     opacity:0.5;}
+      }
+      
+                 .title{
+                       font-size :4.6em;
+                       font-family : bebasbold;
+
+                 }
+                 
+                 .para p{
+                       width : 70%;
+                       margin-left : 15%;
+                       color : #c5c6c7;
+                 }
+                 #click a{
+                             margin-top :50px;
+                           margin-left :4%;
+
+                 }
+       /* till above kw*/
 
 .what::after{
-    position: absolute;
-    bottom:20px;
-    left:-30px;
+  /*  position: absolute;
+    bottom:5px;
+    left:-20px;
     background:rgb(17,142,147,0.8);
     width:0%;
-    height: 10px;
+    height: 5px;
     content: "";
-    transition: .8s;
+    transition: 1s;
     transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
+    */
+
+
 }
+
+   /*
 .what:hover::after{
     width: 130%;
-}
+    color : red;
+
+}       */
 
 @media only screen and (max-width: 600px) {
    body{
@@ -83,17 +165,44 @@ body{
     margin:auto;
     text-align: center;
 }
+
+/*
+    ##################   kw changes     ###################
+   #click a{
+        margin-top :25%;
+         margin-left :-1%;
+                 }
+
+*/
+     .para p{
+                       width : 70%;
+                       margin-left : 15%;
+                       font-size :1em;
+                 }
+
 .title{
     text-transform: uppercase;
     /* font-size: 1.5em; */
+     font-size :3em;
 }
+           #click a{
+                             margin-top :5%;
+
+                        position : absolute;
+                        left : 25%;
+                 }
+
+
+
+/* ############################### */
+
 .what{
     position: absolute;
     top:70%;
     left:30%;
     /* margin:auto; */
     color: white;   
-    font-size: 30px; 
+    font-size: 30px;
 }
 .what::after{
     bottom: 10px;
@@ -107,4 +216,30 @@ body{
         position: fixed;
         z-index: -100;
     }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px)   {
+
+  #click a{
+         margin-top : 2%;
+         left : 35%;
+  }
+  
+  .title{
+
+    /* font-size: 1.5em; */
+     font-size :3em;
+
+}
+
+
 }

@@ -106,6 +106,7 @@
         right:0;
     }
 }
+/* ####################################  FONT DECLARARATIONS  ################################### */
 @font-face {
     font-family: averta;
     src: url("../img/Fonts/AvertaDemoPE-Regular.ttf");
@@ -114,6 +115,36 @@
       font-family: electroharmonix;
       src:url("../img/Fonts/electroharmonix.ttf");
   }
+  @font-face {
+    font-family: averta;
+    src: url("../img/Fonts/AvertaDemoPE-Regular.ttf");
+  }
+  @font-face{
+      font-family: electroharmonix;
+      src:url("../img/Fonts/electroharmonix.ttf");
+  }
+
+ @font-face {
+    font-family: audreyn;
+    src: url("../img/Fonts/audreyn.otf");
+  }
+   @font-face {
+    font-family: audrey;
+    src: url("../img/Fonts/audrey.otf");
+  }
+  @font-face{
+      font-family: audreybold;
+      src:url("../img/Fonts/audreybold.otf");
+  }
+  @font-face {
+    font-family: bebas;
+    src: url("../img/Fonts/bebas.ttf");
+  }
+  @font-face{
+      font-family: bebasbold;
+      src:url("../img/Fonts/bebasbold.ttf");
+  }
+
 /*#########################  ANIMATON CLASSES  ################################################*/
 .img-in{
     animation: img-in 1s ease-out;
@@ -254,7 +285,7 @@ a,a:visited{
     font-size: 10em;
     position:absolute;
     top:35.29%;
-    right: 55%;
+    right: 50%;
     animation-delay: .2s;
     z-index: -50;
     font-family: Playfair Display;
@@ -439,7 +470,6 @@ a,a:visited{
 #openmenu .fas,#closemenu .fas{
     position:absolute;
     font-size: 2rem;
-    left:0;
     top:0;
 }
 #social,#socialmain{
@@ -500,8 +530,7 @@ a,a:visited{
     font-size: 4.6rem;
     line-height: 6.2rem;
     text-align: center;
-
-color: rgba(255, 253, 253, 0.65);
+    color: rgba(255, 253, 253, 0.5  );
 }
 #servicesleft{
     overflow-y: scroll;
@@ -572,6 +601,7 @@ color: rgba(255, 253, 253, 0.65);
 #logo{
     position: absolute;
     top:5rem;
+    font-family: averta;
 }
 #aboutleft{
     width:60%;
@@ -634,10 +664,11 @@ color: rgba(255, 253, 253, 0.65);
     font-family: averta;
     font-style: normal;
     font-weight: normal;
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
     color: rgba(255, 253, 253, 0.53);
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    margin: 1em;
 }
 .logolists{
     position: relative;
@@ -649,9 +680,14 @@ color: rgba(255, 253, 253, 0.65);
     height:20vh;
     float:left;
     margin-right:3rem;
+    font-family: averta;
+    margin-top: 0.7em;
+}
+.logoblock:nth-child(5) .small{
+    font-size: 1.4rem;
 }
 .logoblock .small{
-    font-family: Averta Demo PE;
+    font-family: averta;
     font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;
@@ -660,7 +696,7 @@ color: rgba(255, 253, 253, 0.65);
     color: rgba(255, 253, 253, 0.3);
 }
 .logoblock .big{
-    font-family: Averta Demo PE;
+    font-family: averta;
     font-style: normal;
     font-weight: normal;
     font-size: 2rem;
@@ -669,6 +705,10 @@ color: rgba(255, 253, 253, 0.65);
     color:white;
     position: relative;
     top:-30px;
+}
+.logohead{
+    position: relative;
+    left: 3rem;
 }
 @media only screen and (max-width: 600px) {
     html {
@@ -691,10 +731,10 @@ color: rgba(255, 253, 253, 0.65);
     }
     .imgbox{
         position: absolute;
-        left:1rem;
+        left:5vw;
         top:4rem;
         width:90vw;
-        height:30vh !important;
+        /* height:90vh !important; */
         background-size: contain;
     }
     .title{
@@ -712,6 +752,7 @@ color: rgba(255, 253, 253, 0.65);
         line-height: 4rem;
         position: absolute;
         top:40vh !important;
+        opacity: 0 !important;
     }
     #p1 .title,
     #p2 .title,
@@ -723,16 +764,34 @@ color: rgba(255, 253, 253, 0.65);
     }
     .infobox{
         position: absolute;
-        left: 0;
-        top:25vh;
-        width: 100%;
-        height: 50vh;
+        left: 10%;
+        top:30.39%;
+        width: 80%;
+        height: 35vh;
+        box-shadow: 4px 4px 50px 2px #222;
+        z-index: -1;
     }
     .head{
-        left:10px;
+        left:5px;
+        top:10px
     }
     .description{
+        top:60%;
         left:10px;
+    }
+    .infobox .info-title{
+        font-size:2.2rem;
+    }
+    .infobox .info-des{
+        font-size:1.2rem;
+        position: relative !important;
+        top:-15px !important;
+    }
+    .description .what-title{
+        font-size: 2rem;
+    }
+    .description .what-des{
+        font-size: 1rem;
     }
     #openmenu,#closemenu{
         position: absolute;
@@ -741,65 +800,80 @@ color: rgba(255, 253, 253, 0.65);
     #right,.blend{
         width:100%;
         left:0;
-        height:50vh;
-        top:60%;
+        height:30vh;
+        top:70vh;
         z-index: 1000;
         color: white;
+        /* background: red; */
     }
     #right{
         border-top:solid 5px white;
+        /* margin:-20px; */
+    }
+    #right ul li{
+        /* background: red; */
+        position: relative;
+        margin:0 auto;
+        top:-50%;
+        left:3%;
+        width:28vw;
+        font-size: 2rem;
+        display: inline-block;
+    }
+    .rightfooter{
+        bottom:0;
     }
     .menu{
-        color:white;
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.5rem;
+    }
+    #about{
+        position: relative;
+        left:18%;
+    }
+    #contact{
+        position: relative;
+        left:10%;
     }
     #left{
         width:100%;
         left:0;
         height:100vh;
-        top:0%;
+        top:0vh;
         z-index: 999;
         padding: 0;
         margin: 0;
+        /* background: red !important; */
+        font-size: 2rem;
+        /* background: #C1006F */
     }
     .leftcontent{
-        width: 100%;
-        height: 50vh;
+        width: 100% !important;
+        height: 65vh;
         overflow-y: scroll;
-        margin:0
+        margin-top:5vh !important;
+        margin-left: 0 !important;
     }
     #contactleft{
         overflow-y: scroll;
-        width: 90%;
-        height: 50vh;
-        margin-top:15%;
-        margin-left:2rem;
+        width: 90% !important;
+        /* margin-top:3rem; */
+        margin-left:5vw !important;
     }
     #contactleft form{
-        margin:0;
+        margin-top:10px;
         padding: 0;
         width: 100%;
-        height: 65vh;
+        height: 60vh;
         z-index: 999;
     }
     .formsubmit{
         margin-left:30%;
     }
-    #aboutleft{
-        width: 100%;
-        /* height: 60vh; */
-    }
-    #right ul{
-        position: absolute;
-        top:5%;
-        right: 1%;
-    }
-    #right ul li{
-        font-size:3rem;
+ 
 
-    }
-    #left{
-        font-size: 2rem;
-    }
     #closemenu{
         display: none;
     }
@@ -844,7 +918,7 @@ color: rgba(255, 253, 253, 0.65);
         animation: leftarrow 1.5s infinite;
     }
     #social{
-        display: none;
+      display: none;
     }
     #whichpagemain{
         display: none;
@@ -857,6 +931,11 @@ color: rgba(255, 253, 253, 0.65);
     }
     .logoblock{
         width:21%;
+    }
+    #logo{
+        /* background: rebeccapurple; */
+        margin-top: -5vh !important;
+        /* margin-left:-7% !important; */
     }
   }
   .vintshim{

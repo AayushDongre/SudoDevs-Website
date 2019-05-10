@@ -155,6 +155,16 @@ body{
 
 }       */
 
+.preloader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0E111F;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    text-align: center;
+}
 @media only screen and (max-width: 600px) {
    body{
        font-size: 20px
@@ -165,6 +175,21 @@ body{
     margin:auto;
     text-align: center;
 }
+.preloader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#0E111F;
+    height: 100h;
+    width: 100vw;
+    z-index: 999999;
+    text-align: center;
+    }
+
+    .preloader{
+        position: relative;
+        top:20vh;
+    }
 
 /*
     ##################   kw changes     ###################

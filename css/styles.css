@@ -676,7 +676,6 @@ a,a:visited{
     top:-3rem;
 }
 .logoblock{
-    /* background: red; */
     width:27%;
     height:20vh;
     float:left;
@@ -817,14 +816,12 @@ a,a:visited{
         top:70vh;
         z-index: 1000;
         color: white;
-        /* background: red; */
     }
     #right{
         border-top:solid 5px white;
         /* margin:-20px; */
     }
     #right ul li{
-        /* background: red; */
         position: relative;
         margin:0 auto;
         top:-50%;
@@ -999,7 +996,6 @@ a,a:visited{
         line-height: 2.8rem
     }
     .whowe:nth-child(5){
-        background: red;
         margin-top:-20px;
     }
     .preloader{

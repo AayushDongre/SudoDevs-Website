@@ -722,6 +722,7 @@ a,a:visited{
     z-index: 999999;
     text-align: center;
 }
+
 @media only screen and (max-width: 600px) {
     html {
       overflow: hidden;
@@ -835,6 +836,7 @@ a,a:visited{
     .rightfooter{
         bottom:0;
     }
+
     .menu{
         position: static;
         display: flex;
@@ -857,7 +859,7 @@ a,a:visited{
         z-index: 999;
         padding: 0;
         margin: 0;
-        /* background: red !important; */
+        background: black !important;
         font-size: 2rem;
         /* background: #C1006F */
     }
@@ -951,7 +953,36 @@ a,a:visited{
         margin-top: -5vh !important;
         /* margin-left:-7% !important; */
     }
-    
+    .logohead{
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+        margin-left: -40px;
+    }
+    .logolist{
+        position: relative;
+        top:40px;
+        font-size:2.2rem;
+        line-height: 2.3rem;
+        height:2.5rem;
+        margin:0;
+        margin-top:10px;
+    }
+    .logoblock{
+        margin-top:150px;
+    }
+    .logoblock .big{
+        margin-top:35px;
+    }
+
+    .logoblock:nth-child(5) .small{
+        width:150%;
+    }
+    .logoblock:nth-child(5){
+        margin-left: -20px;
+    }
+    .logoblock:nth-child(5) .big{
+        margin-left:20px
+    }
   .preloader-wrapper{
     position: fixed;
     top: 0;
@@ -962,7 +993,15 @@ a,a:visited{
     z-index: 999999;
     text-align: center;
     }
-
+    .whowe{
+        color:white;
+        mix-blend-mode:normal;
+        line-height: 2.8rem
+    }
+    .whowe:nth-child(5){
+        background: red;
+        margin-top:-20px;
+    }
     .preloader{
         position: relative;
         top:20vh;

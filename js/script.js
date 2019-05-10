@@ -326,7 +326,7 @@ $('select').formSelect(); //contact form select
 
 //Preloader
 $(window).on("load", function() {
-    preloaderFadeOutTime = 500;
+    var preloaderFadeOutTime = 500;
     function hidePreloader() {
     var preloader = $('.preloader-wrapper');
     preloader.fadeOut(preloaderFadeOutTime);

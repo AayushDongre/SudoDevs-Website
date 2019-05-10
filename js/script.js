@@ -227,6 +227,11 @@ var navopen = false;
         $(".rightarrow,.leftarrow").css("display","none");
 
           $("#left").css({background:"url('img/navbk3.png')","background-position":"top 100vh left 0"});
+          if($(window).outerWidth()<600)
+            {
+                $("#left").css({"background-position":"top 50vh left -20vw","background-repeat":"no-repeat","background-size":"cover"})
+            }
+
 
         navopen = true;
     });
@@ -243,6 +248,7 @@ var navopen = false;
         $(".rightarrow,.leftarrow").css("display","block");
         
         $("#left").css({background:"url('img/navbk3.png')"});
+        
 
         navopen = false;
     });
@@ -271,6 +277,10 @@ $("#right ul li").click(function(){
         if(!$("#about").hasClass("current") && current_navBk=="navbk2.png")
         {
             $("#left").css({background:"","background-position":"top 115vh left 10vw"});
+            if($(window).outerWidth()<600)
+            {
+                $("#left").css({"background-position":"top 0vh left -20vw","background-repeat":"no-repeat","background-size":"cover"})
+            }
         }
        if($("#about").hasClass("current"))
         {
@@ -281,16 +291,17 @@ $("#right ul li").click(function(){
         {
             $("#left").css({background:"url('img/navbk2.png')","background-position":"top 0 left -15vw"});
         }
+
         else if($(".current") && current_navBk=="navbk3.png")
         {
             $("#left").css({background:"","background-position":"top 115vh left 10vw"});
+            if($(window).outerWidth()<600)
+            {
+                $("#left").css({"background-position":"top 0vh left -20vw","background-repeat":"no-repeat","background-size":"cover"})
+            }
+        
         }
 
-        if($(".current").length==0)
-        {
-            alert("Adf");
-        }
- 
 });   
 
 //CONTACT US MAIN MENU CLICK ANIMATION

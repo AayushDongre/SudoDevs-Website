@@ -277,10 +277,15 @@ $("#right ul li").click(function(){
             $("#left").css({background:"url('img/navbk2.png')","background-position":"top 0 left -15vw"});
         }
 
-        if($(".current") && current_navBk=="navbk3.png")
+        if($(".current")&& $("#about").hasClass("current") && current_navBk=="navbk3.png")
+        {
+            $("#left").css({background:"url('img/navbk2.png')","background-position":"top 0 left -15vw"});
+        }
+        else if($(".current") && current_navBk=="navbk3.png")
         {
             $("#left").css({background:"","background-position":"top 115vh left 10vw"});
         }
+
         if($(".current").length==0)
         {
             alert("Adf");

@@ -659,6 +659,7 @@ a,a:visited{
 #logo{
     padding-left: 2rem;
     margin-top: -2rem;
+    
 }
 .logolist{
     font-family: averta;
@@ -930,7 +931,9 @@ a,a:visited{
         line-height: 2rem;
     }
     .logoblock{
+        position: relative;
         width:21%;
+        top:-15%;
     }
     #logo{
         /* background: rebeccapurple; */

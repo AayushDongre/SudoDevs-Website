@@ -225,11 +225,10 @@ var navopen = false;
         $("#closemenu").css({display:"block"});
         
         $(".rightarrow,.leftarrow").css("display","none");
-
           $("#left").css({background:"url('img/navbk3.png')","background-position":"top 100vh left 0"});
-          if($(window).outerWidth()<600)
+          if($(window).outerWidth()<=600)
             {
-                $("#left").css({"background-position":"top 50vh left -20vw","background-repeat":"no-repeat","background-size":"cover"})
+                $("#left").css({"background-position":"top -10vh left 0vw"})
             }
 
 
@@ -269,7 +268,7 @@ $("#right ul li").click(function(){
             currentl.fadeOut(500);
             futurel.fadeIn(500).addClass("currentleft");
         } 
-        var current_navBk = $("#left").css("background").substring(47,57);
+        var current_navBk = $("#left").css("background").substring(48,58);
 
         console.log($(".current").length);
         console.log("lmao " + current_navBk);

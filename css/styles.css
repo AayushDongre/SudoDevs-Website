@@ -711,6 +711,17 @@ a,a:visited{
     position: relative;
     left: 3rem;
 }
+
+.preloader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0E111F;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999999;
+    text-align: center;
+}
 @media only screen and (max-width: 600px) {
     html {
       overflow: hidden;
@@ -940,8 +951,26 @@ a,a:visited{
         margin-top: -5vh !important;
         /* margin-left:-7% !important; */
     }
+    
+  .preloader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#0E111F;
+    height: 100h;
+    width: 100vw;
+    z-index: 999999;
+    text-align: center;
+    }
+
+    .preloader{
+        position: relative;
+        top:20vh;
+    }
   }
   .vintshim{
     letter-spacing: 0.05em;
 
   }
+
+

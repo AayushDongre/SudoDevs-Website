@@ -309,5 +309,13 @@ $("#ContactUsIcon").click(function(){
 //PLUGIN INITIALIZATIONS    
 $('select').formSelect(); //contact form select
 
-
+//Preloader
+$(window).on("load", function() {
+    preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.preloader-wrapper');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+    });
 });

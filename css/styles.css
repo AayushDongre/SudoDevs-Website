@@ -1020,6 +1020,10 @@ a,a:visited{
         left:90%;
         animation:arrowdown .8s infinite;
     }
+    #contactleft h6{
+        position: relative;
+        top:100px;
+    }
    
 }
   @media only screen and (max-width: 320px){
@@ -1048,5 +1052,9 @@ a,a:visited{
         top:100vh !important;
         left:90%;
         animation:arrowdown .8s infinite;
+    }
+    #contactleft h6{
+        position: relative;
+        top:100px;
     }
   }

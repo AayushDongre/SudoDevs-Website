@@ -68,7 +68,7 @@ $(document).ready(function(){
             
         current.delay(700).animate({opacity:0},500);
         //CHECK IF LAST ELEMENT
-        console.log(current.attr("id").substring(1));
+        // console.log(current.attr("id").substring(1));
         if(current.attr("id").substring(1)!=$(".wrapper").length.toString()){
             current = current.next();
             if(current.attr("class")=="imgbox")
@@ -212,7 +212,7 @@ $(".info").css({height:.4162*h,width:.2916*w})
 $(window).resize(function(){
 var h = $(window).outerHeight();
 var w = $(window).outerWidth();
-console.log(w + " " + h);
+// console.log(w + " " + h);
     
     
 $(".wrapper").css({height:h,width:w});
@@ -293,12 +293,13 @@ $("#right ul li").click(function(){
             currentl.fadeOut(500);
             futurel.fadeIn(500).addClass("currentleft");
         } 
-        var current_navBk = $("#left").css("background").substring(47,57);
+        // var current_navBk = $("#left").css("background").substring(47,57);
 
-        console.log($(".current").length);
-        console.log("lmao " + current_navBk);
+        // console.log($(".current").length);
+        // console.log("lmao " + current_navBk);
         
-        if(!$("#about").hasClass("current") && current_navBk=="navbk2.web")
+
+        if($("#services").hasClass("current"))
         {
             $("#left").css({background:"","background-position":"top 115vh left 10vw"});
             if($(window).outerWidth()<600)
@@ -306,26 +307,23 @@ $("#right ul li").click(function(){
                 $("#left").css({"background-position":"top 0vh left -20vw","background-repeat":"no-repeat","background-size":"cover"})
             }
         }
-       if($("#about").hasClass("current"))
-        {
-            $("#left").css({background:"url('img/navbk2.webp')","background-position":"top -45vh left -15vw"});
-        }
 
-        if($(".current")&& $("#about").hasClass("current") && current_navBk=="navbk3.web")
+        else if($("#about").hasClass("current"))
         {
             $("#left").css({background:"url('img/navbk2.webp')","background-position":"top 0 left -15vw"});
         }
-
-        else if($(".current") && current_navBk=="navbk3.web")
+         else if($("#contact").hasClass("current"))
         {
             $("#left").css({background:"","background-position":"top 115vh left 10vw"});
             if($(window).outerWidth()<600)
             {
                 $("#left").css({"background-position":"top 0vh left -20vw","background-repeat":"no-repeat","background-size":"cover"})
             }
-        
         }
-
+        else if($("#logo").hasClass("current"))
+        {
+            $("#left").css({background:"url('img/navbk3.webp')"});
+        }
 });   
 
 //CONTACT US MAIN MENU CLICK ANIMATION

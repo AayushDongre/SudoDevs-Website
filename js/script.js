@@ -261,6 +261,22 @@ var navopen = false;
         navopen = false;
     });
 
+    $(".gotoprojects").click(function(){
+        $("#navmain").fadeOut(800); 
+        $("#openmenu").animate({left:"3%"});
+        $("#closemenu").animate({left:"110%"});
+        $(".current").removeClass("current");
+        $(".currentleft").removeClass("currentleft").css({display:"none"});
+        $("#logo").addClass("currentleft").css({display:"block"});
+        if($(window).outerWidth()<=600)
+        $("#closemenu").css({display:"none"});
+        $(".rightarrow,.leftarrow").css("display","block");
+        
+        $("#left").css({background:"url('img/navbk3.png')"});
+        
+        navopen = false
+    });
+
 //NAVMENU RIGHT WIDTH ANIMATION    
 $("#right ul li").click(function(){  
         $(".current").toggleClass("current");
@@ -314,6 +330,22 @@ $("#right ul li").click(function(){
 
 //CONTACT US MAIN MENU CLICK ANIMATION
 $("#ContactUsIcon").click(function(){
+    $("#navmain").fadeIn(200); 
+    $("#openmenu").animate({left:"-20vw"});
+    $("#closemenu").animate({left:"90%"});
+
+    if($(window).outerWidth()<=600)
+    $("#closemenu").css({display:"block"});
+    
+    $(".rightarrow,.leftarrow").css("display","none");
+    navopen = true;
+
+    $(".current").removeClass("current");
+    $("#contact").addClass("current");
+    $(".currentleft").fadeOut(200).removeClass("currentleft");
+    $("#contactleft").fadeIn(200).addClass("currentleft");
+}); 
+$(".gotocontact").click(function(){
     $("#navmain").fadeIn(200); 
     $("#openmenu").animate({left:"-20vw"});
     $("#closemenu").animate({left:"90%"});

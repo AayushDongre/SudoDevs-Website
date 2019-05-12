@@ -1014,6 +1014,13 @@ a,a:visited{
         top:10px;
         height: 60vh;
     }
+    .leftcontent .arrow{
+        position: fixed;
+        top:100vh !important;
+        left:90%;
+        animation:arrowdown .8s infinite;
+    }
+   
 }
   @media only screen and (max-width: 320px){
 
@@ -1022,17 +1029,24 @@ a,a:visited{
         position: relative;
         left:-10%;
     }
-    #right{
+    #right,.blend{
         top:85vh;
-        /* height: 45vh; */
+        height: 25vh;
+        /* background: red; */
     }
     .leftcontent{
-        height: 75vh;
+        height: 78vh;
         position: relative;
         top:10px;
     }
     .rightfooter{
-        position: relative;
-        top:100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .leftcontent .arrow{
+        position: fixed;
+        top:100vh !important;
+        left:90%;
+        animation:arrowdown .8s infinite;
     }
   }

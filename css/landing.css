@@ -63,7 +63,7 @@ body{
     height: 100vh;
     position: absolute;
     color:white;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: Karla;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
@@ -71,6 +71,7 @@ body{
     text-align: center;
     display: flex;
     align-content: center;
+    letter-spacing: 0.02em;
 
 }
 .para{
@@ -78,25 +79,43 @@ body{
     width: 50%;
     margin:auto
 }
-.title{
-    text-transform: uppercase;
-    font-size: 1.5em;
+.brand-logo{
+    /* text-transform: uppercase;
+    font-size: 1.5em; */
+    position: absolute;
+    left: 3%;
+    top: 3.43%;
+    bottom: 92.41%;
+
+    font-family: 'Karla', sans-serif;
+    font-size: 2rem;
+    line-height: 44px;
+    font-weight: bold;
+    letter-spacing: -0.03   em;
+
+    /* identical to box height */
+    text-align: center;
+    
+
+    color: #FFFFFF;
+
+
 }
 
  /* Changes kw*/
 .what{
   color : rgb(17,142,147,0.8);
     position: absolute;
-    top:70%;
-    left: 40%;
+    top:65%;
+    left: 45%;
     /* margin:auto auto; */
+    font-family: averta;
     color: white;   
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-decoration: none;
    color : white;
-   border-top : 3px solid rgb(17,142,147,0.8);
-     border-bottom : 3px solid rgb(17,142,147,0.8);
-   border-radius : 4px;
+   border: 3px solid rgb(17,142,147,0.8);
+   border-radius : 8px;
    padding : 5px;      
              background : none;
 }
@@ -116,19 +135,24 @@ body{
       }
       
                  .title{
-                       font-size :4.6em;
-                       font-family : bebasbold;
-
+                       font-size :3.5em;
+                       font-family: 'Karla', sans-serif;
+                       font-weight: bold;
+                       opacity: 0.9;
+                       letter-spacing: -0.01em;
+                       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                  }
+
                  
                  .para p{
                        width : 70%;
                        margin-left : 15%;
                        color : #c5c6c7;
+                       font-family: averta;
                  }
                  #click a{
                              margin-top :50px;
-                           margin-left :4%;
+                           margin-left :0%; 
 
                  }
        /* till above kw*/

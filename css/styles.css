@@ -814,7 +814,7 @@ a,a:visited{
     #openmenu,#closemenu{
         position: absolute;
         font-size: 3rem;
-        top: 3.5%;
+        top: 28px;
         left:4%
     }
     #right,.blend{

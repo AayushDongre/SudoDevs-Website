@@ -474,7 +474,7 @@ a,a:visited{
 }
 #social,#socialmain{
     /* height:2.6rem; */
-    width:13rem;
+    width:9rem;
     margin:0;
     font-size: 2rem;
     z-index: 999;
@@ -515,10 +515,10 @@ a,a:visited{
 }
 .formsubmit{
     margin:0 auto;
-    background: rgb(252,208,94,0.8);
+    background:#085049
 }
 .formsubmit:hover{
-    background: rgb(241, 186, 46);
+    background: rgba(9, 155, 101, 0.877)
 }
 .counter{
     position: absolute;
@@ -606,7 +606,7 @@ a,a:visited{
 #aboutleft{
     width:60%;
     margin:6rem 2rem;
-    padding: 0 4rem;
+    padding: 0 3rem;
     font-size:3rem;
 }
 .whowe{
@@ -739,13 +739,14 @@ a,a:visited{
         max-width: 100vw;
         max-height: 100vh;
         z-index: 800;
+        overflow: hidden;
         /* opacity: 0; */
     }
     .imgbox{
         position: absolute;
-        left:5vw;
-        top:4rem;
-        width:90vw;
+        left:3.9vw;
+        top:5rem;
+        width:92vw;
         /* height:90vh !important; */
         background-size: contain;
     }
@@ -782,14 +783,19 @@ a,a:visited{
         height: 35vh;
         box-shadow: 4px 4px 50px 2px #222;
         z-index: -1;
+        /* backdrop-filter: blur(10px); */
     }
     .head{
         left:5px;
-        top:10px
+        top:10px;
+        margin-top: 25px;
+        margin-left:12px;
     }
     .description{
         top:60%;
         left:10px;
+        margin-left:12px;
+        
     }
     .infobox .info-title{
         font-size:1.8rem;
@@ -808,6 +814,8 @@ a,a:visited{
     #openmenu,#closemenu{
         position: absolute;
         font-size: 3rem;
+        top: 3.2%;
+        left:4%
     }
     #right,.blend{
         width:100%;
@@ -831,14 +839,15 @@ a,a:visited{
         display: inline-block;
     }
     .rightfooter{
-        bottom:0;
+        bottom:10px;
+        left: auto;  
     }
 
     .menu{
         position: static;
         display: flex;
         justify-content: space-between;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     #about{
         position: relative;
@@ -847,6 +856,10 @@ a,a:visited{
     #contact{
         position: relative;
         left:10%;
+    }
+    .mail{
+        font-family: averta;
+        opacity: 0.7;
     }
     #left{
         width:100%;
@@ -895,7 +908,7 @@ a,a:visited{
         animation:arrowdown .8s infinite;
     }
     .service{
-        margin:0;
+        margin:5px;
     }
     #servicesleft{
         margin-top:3rem;
@@ -908,14 +921,15 @@ a,a:visited{
     }
     
     .counter{
-        left:2%;
+        left:4%;
+        margin-top: 15px;
         font-family: Playfair Display;
     }
     .rightarrow,.leftarrow{
         font-size: 6rem;
         position: absolute;
-        color:#ffc200;
-        top:45%;
+        color:#ffc20099;
+        top:42%;
         z-index: 10;
     }
     .rightarrow{
@@ -933,7 +947,8 @@ a,a:visited{
         display: none;
     }
     #ContactUsIcon{
-        left:61%
+        /* left:61% */
+        right: 5%;
     }
     .whowe{
         line-height: 2rem;
@@ -947,6 +962,7 @@ a,a:visited{
         /* background: rebeccapurple; */
         margin-top: -5vh !important;
         /* margin-left:-7% !important; */
+        overflow-x: hidden;
     }
     .logohead{
         font-size: 2.5rem;
@@ -990,11 +1006,18 @@ a,a:visited{
     }
     .whowe{
         color:white;
+        font-size: 2.8rem;
         mix-blend-mode:normal;
-        line-height: 2.8rem
+        line-height: 2.8rem;
+        letter-spacing: 0.03rem;
     }
     .whowe:nth-child(5){
         margin-top:-20px;
+    }
+    .whoans{
+        font-size: 2rem;
+        letter-spacing: 0.01rem;
+    }
     }
     .preloader{
         position: relative;

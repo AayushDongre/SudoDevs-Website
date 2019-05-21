@@ -607,17 +607,17 @@ a,a:visited{
     font-family: averta;
 }
 #aboutleft{
-    width:60%;
-    margin:6rem 2rem;
-    padding: 0 3rem;
-    font-size:3rem;
+    width: 58%;
+    margin: 8rem 0.5rem;
+    padding: 0 2rem;
+    font-size: 3rem;
 }
 .whowe{
     font-family: averta;
     font-style: normal;
     font-weight: bold;
     font-size: 3.5rem;
-    line-height: 0px;
+    line-height: 15px;
 /*    letter-spacing: -0.01em;*/
     color: #FFFFFF;
     mix-blend-mode: overlay;
@@ -677,7 +677,7 @@ a,a:visited{
 }
 .logolists{
     position: relative;
-    top:-3rem;
+    top:-1rem;
 }
 .logoblock{
     width:27%;
@@ -712,7 +712,9 @@ a,a:visited{
 }
 .logohead{
     position: relative;
-    left: 3rem;
+    left: 2.45rem;
+    text-shadow: 4px 10px 8px rgb(0, 0, 0);
+    font-size: 3.8rem;
 }
 
 .preloader-wrapper{
@@ -792,7 +794,7 @@ a,a:visited{
     .head{
         left:5px;
         top:10px;
-        margin-top: 25px;
+        margin-top: 10px;
         margin-left:12px;
     }
     .description{
@@ -1031,6 +1033,9 @@ a,a:visited{
   .vintshim{
     letter-spacing: 0.05em;
 
+  }
+  .mail{
+      opacity: 0.7;
   }
   @media only screen and (max-width: 375px){
     .menu{

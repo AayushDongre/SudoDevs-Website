@@ -234,7 +234,7 @@ var navopen = false;
         $("#closemenu").css({display:"block"});
         
         $(".rightarrow,.leftarrow").css("display","none");
-          $("#left").css({background:"url('img/navbk3.webp')","background-position":"top 100vh left 0"});
+          $("#left").css({background:"url('img/navbk3.webp')","background-position":"top 100vh left 0","background-size":"cover","background-position":"center"});
           if($(window).outerWidth()<=600)
             {
                 $("#left").css({"background-position":"top -10vh left 0vw"})
@@ -310,7 +310,7 @@ $("#right ul li").click(function(){
 
         else if($("#about").hasClass("current"))
         {
-            $("#left").css({background:"url('img/navbk2.webp')","background-position":"top 0 left -15vw"});
+            $("#left").css({background:"url('img/navbk2.webp')","background-position":"top 0 left -15vw","background-size":"cover","background-position":"center"});
         }
          else if($("#contact").hasClass("current"))
         {

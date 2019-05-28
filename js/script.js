@@ -44,6 +44,10 @@ $(document).ready(function(){
         $(".counter .page").text(i+1);
         var color = $("#p"+(i+1)+" .title").css("color");
         $(".page").css("color",color);
+
+        $('meta[name=theme-color]').remove();
+        $('head').append( '<meta name="theme-color" content="'+color+'">' );
+        
         //CHANGE IMGBOX IMAGE
         if($(window).outerWidth()>600)
         {

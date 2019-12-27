@@ -1,300 +1,146 @@
 /*###########################  font declaration  #################################*/
- @font-face {
+@font-face {
     font-family: averta;
     src: url("../img/Fonts/AvertaDemoPE-Regular.ttf");
-  }
-  @font-face{
-      font-family: electroharmonix;
-      src:url("../img/Fonts/electroharmonix.ttf");
-  }
-
- @font-face {
-    font-family: audreyn;
-    src: url("../img/Fonts/audreyn.otf");
-  }
-   @font-face {
-    font-family: audrey;
-    src: url("../img/Fonts/audrey.otf");
-  }
-  @font-face{
-      font-family: audreybold;
-      src:url("../img/Fonts/audreybold.otf");
-  }
-  @font-face {
-    font-family: bebas;
-    src: url("../img/Fonts/bebas.ttf");
-  }
-  @font-face{
-      font-family: bebasbold;
-      src:url("../img/Fonts/bebasbold.ttf");
-  }
+}
 
 /*###########################  font declaration  #################################*/
-
-
-*{ -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     box-sizing: border-box;
+body {
+    margin: 0;
+    font-family: averta;
+    background-color: black;
+    height: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
 }
 
-html::-webkit-scrollbar{ 
-    width: 0 !important 
-}
-html{
-     overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-    
+.video-wrapper {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
 }
 
-body{
-    font-size: 25px;
-    background: url("../img/landingbk.png");
-}
-.bk{
-    width: 100vw;
-    min-height:100vh;
+.bk {
+    background-size: contain;
+    background-position: center center;
+    background-color: black;
     position: fixed;
-    z-index: -100;
-    top:-100px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: -100px;
+    left: -10px;
+
+}
+
+/* ----------------------NAVBAR------------------- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.25rem;
+}
+
+.social-icons {
     margin: 0 auto;
 }
-.content{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    color:white;
-    font-family: Karla;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    line-height: normal;
-    text-align: center;
-    display: flex;
-    align-content: center;
-    letter-spacing: 0.02em;
 
+.social-icons a{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
 }
-.para{
+
+.nav-toggled {
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 5px;
+}
+
+/* ---------------WHAT CONTENT------------------- */
+.container {
+    min-height: 100vh;
+    max-width: 80%;
+    width: 860px;
+}
+
+.intro-text {
     position: relative;
-    width: 50%;
-    margin:auto
-}
-.brand-logo{
-    /* text-transform: uppercase;
-    font-size: 1.5em; */
-    position: absolute;
-    left: 3%;
-    top: 3.43%;
-    bottom: 92.41%;
-
-    font-family: 'Karla', sans-serif;
-    font-size: 2rem;
-    line-height: 44px;
-    font-weight: bold;
-    letter-spacing: -0.03   em;
-
-    /* identical to box height */
-    text-align: center;
-    
-
-    color: #FFFFFF;
-
-
-}
-
- /* Changes kw*/
-.what{
-  color : rgb(17,142,147,0.8);
-    position: absolute;
-    top:65%;
-    left: 45%;
-    /* margin:auto auto; */
     font-family: averta;
-    color: white;   
-    font-size: 1.1em;
-    text-decoration: none;
-   color : white;
-   border: 3px solid rgb(17,142,147,0.8);
-   border-radius : 8px;
-   padding : 5px;      
-             background : none;
-}
- 
-
-       .what:hover{
-       animation :ctext;
-       animation-duration : 1s;
-       animation-fill-mode : forwards;
-
-  }
-    @keyframes ctext {
-  from {}
-  to {   background :grey;
-     color: white;
-     opacity:0.5;}
-      }
-      
-                 .title{
-                       font-size :3.5em;
-                       font-family: 'Karla', sans-serif;
-                       font-weight: bold;
-                       opacity: 0.9;
-                       letter-spacing: -0.01em;
-                       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                 }
-
-                 
-                 .para p{
-                       width : 70%;
-                       margin-left : 15%;
-                       color : #c5c6c7;
-                       font-family: averta;
-                 }
-                 #click a{
-                             margin-top :50px;
-                           margin-left :0%; 
-
-                 }
-       /* till above kw*/
-
-.what::after{
-  /*  position: absolute;
-    bottom:5px;
-    left:-20px;
-    background:rgb(17,142,147,0.8);
-    width:0%;
-    height: 5px;
-    content: "";
-    transition: 1s;
-    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
-    */
-
-
-}
-
-   /*
-.what:hover::after{
-    width: 130%;
-    color : red;
-
-}       */
-
-.preloader-wrapper{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #0E111F;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999999;
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.4rem;
 }
-@media only screen and (max-width: 600px) {
-   body{
-       font-size: 20px
-   }
-   .para{
+
+.what-btn {
+    color: rgba(255, 255, 255, 0.9) !important;
     position: relative;
-    width: 90%;
-    margin:auto;
+    margin: 0 auto;
+    border-bottom: 8px solid #2C5364;
     text-align: center;
+    font-size: 1.5rem;
+    transition: all 0.1s linear;
 }
-.preloader-wrapper{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background:#0E111F;
-    height: 100h;
-    width: 100vw;
-    z-index: 999999;
-    text-align: center;
+
+.what-btn:hover {
+    padding: 0 1.2rem;
+    transition: all 0.1s linear;
+}
+
+/* --------------MEDIA QUERIES--------------- */
+
+@media only screen and (max-width: 576px) {
+    .intro-text {
+        font-size: 1rem;
     }
 
-    .preloader{
-        position: relative;
-        top:20vh;
+    .navbar-brand {
+        font-size: 1.2rem;
     }
 
-/*
-    ##################   kw changes     ###################
-   #click a{
-        margin-top :25%;
-         margin-left :-1%;
-                 }
-
-*/
-     .para p{
-                       width : 70%;
-                       margin-left : 15%;
-                       font-size :1em;
-                 }
-
-.title{
-    text-transform: uppercase;
-    /* font-size: 1.5em; */
-     font-size :3em;
-}
-           #click a{
-                             margin-top :5%;
-
-                        position : absolute;
-                        left : 25%;
-                 }
-
-
-
-/* ############################### */
-
-.what{
-    position: absolute;
-    top:70%;
-    left:30%;
-    /* margin:auto; */
-    color: white;   
-    font-size: 30px;
-}
-.what::after{
-    bottom: 10px;
-    left:-20px;
-}
-   
-    .bk{
-        min-width: 100vw;
-        height:100vh;
-        transform: scale(3);
-        position: fixed;
-        z-index: -100;
+    .nav-item {
+        text-align: right;
     }
-}
 
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 992px)   {
-
-  #click a{
-         margin-top : 2%;
-         left : 35%;
-  }
-  
-  .title{
-
-    /* font-size: 1.5em; */
-     font-size :3em;
-
-}
-
-
-}
-@media only screen and (max-width: 350px){
-    .what{
-        position: relative;
-        top:75%;
+    .social-icons {
+        margin-right: auto;
     }
+
+    .bk {
+        left: -7px;
+    }
+
+    .what-btn {
+        font-size: 1.1rem;
+        border-bottom: 5px solid #2C5364;
+    }
+
 }

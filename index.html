@@ -2,88 +2,96 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
 
-    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no" /> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/landing.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/landing.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet"> 
-
-    <title>SudoDevs Inc</title>
+  <title>SudoDevs LLP</title>
 </head>
 
 <body>
-  <!--PRELOADER-->
-  <div class="preloader-wrapper valign-wrapper">
-    <div class="preloader">
-        <img src="img/preloader.gif" class="responsive-img">
-    </div>
-  </div>
-   
-  <video autoplay loop muted class="bk" >
-        <source src="img/landingvid.mp4" type="video/mp4"/>
-        <source src="img/landingvid.ogv" type="video/ogg"/>
-   </video>
-                                
-      <div class="content valign-wrapper">
-          <div class="para" class = "mtitle"><span class="title">SUDODEVS</span>
-          </br>
-          <p>
-          A web
-        development studio that specializes in creating professional websites, custom web solutions
-        and eCommerce solutions for its clients.
-        </p>
-
-
-        </div>
+  <!-- --------------------NAVBAR------------------- -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand p-lg-3 px-1">SUDODEVS</a>
+    <button class="navbar-toggler" data-target="#nav" data-toggle="collapse" aria-controls="my-nav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse px-2 pt-2 pt-md-0 px-sm-0 ">
+      <div class="social-icons nav-item px-md-5 mr-md-5">
+        <a  href="https://www.instagram.com/sudodevs/"><i class="fab fa-instagram px-lg-4 px-sm-2 px-4"></i></a>
+        <a  href="https://www.facebook.com/sudodevs"><i class="fab fa-facebook-square px-lg-4 px-sm-2"></i></a>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link px-lg-4" href="#">Contact Us </a>
         
-               <div id="click">
-        <a class="what center-align"  href="project.html" >
-
-          <div class="whatlink">What we do</div>
-        </a>
-
-      </div>
-      </div>
-      
-      
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Optional JavaScript -->
-    <!-- <script src="js/landing.js"></script> -->
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
-<!--     <script type="text/javascript">
-      $(window).on('load resize',function(){
-          if($(window).width() < 950){
-              window.location = "https://m.sudodevs.com/"
-          }
-      });
-  </script> -->
-<script type="text/javascript">
-  $(window).on("load", function() {
-    var preloaderFadeOutTime = 500;
-    function hidePreloader() {
-    var preloader = $('.preloader-wrapper');
-    preloader.fadeOut(preloaderFadeOutTime);
-    }
-    hidePreloader();
-    });
-</script>
-
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- -----------------CONTENT AND VIDEO------------------ -->
+  <div class="video-wrapper">
+    <video autoplay loop muted class="bk">
+      <source src="img/landingvid.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="container d-flex align-items-center justify-content-centerpt-xl-4">
+    <div class="d-flex flex-column ">
+    <p class="intro-text mt-5">
+      A web development studio that specializes in creating professional websites,
+      custom web solutions and eCommerce solutions
+      for its clients.
+    </p>
+    <a href="project.html" class="what-btn ">WHAT WE DO</a>`966
+  </div>
+  </div>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    $(".navbar-toggler").on("click", function () {
+      $("#nav").toggleClass("nav-toggled");
+      console.log("clicked")
+    })
+  </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!-- <div class="content valign-wrapper">
+    </br>
+    
+  </div> -->
+
+<!-- <div id="click">
+    <a class="what center-align" href="project.html">
+      <div class="whatlink">What we do</div>
+    </a>
+
+  </div>
+  </div> -->
